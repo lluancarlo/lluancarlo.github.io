@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=43 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -30,7 +30,9 @@
 [ext_resource type="PackedScene" uid="uid://5cwo2kmeq7s7" path="res://assets/scenes/natures/crops_dirt_row_end.scn" id="24_vw2qp"]
 [ext_resource type="PackedScene" uid="uid://dmqs32owkanoe" path="res://assets/scenes/natures/crops_corn_stage_2.scn" id="25_r1aob"]
 [ext_resource type="Material" uid="uid://b0uhbpq0epm75" path="res://assets/materials/brazil.material" id="28_1c5e0"]
-[ext_resource type="Script" path="res://scenes/ShowFps.gd" id="31_bjc0q"]
+[ext_resource type="Script" path="res://scripts/ShowFps.gd" id="31_bjc0q"]
+[ext_resource type="PackedScene" uid="uid://dp10q8eg5v3tp" path="res://tools/node_debug/VehicleBody3D/DebugVehicleBody3D.tscn" id="32_bvi33"]
+[ext_resource type="PackedScene" uid="uid://dnytmelmsitub" path="res://tools/node_debug/VehicleWheel3D/DebugVehicleWheel3D.tscn" id="33_htkxi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ev86x"]
 material = ExtResource("1_bdqam")
@@ -1652,3 +1654,18 @@ label_settings = SubResource("LabelSettings_ylj7i")
 layout_mode = 2
 text = "96"
 label_settings = SubResource("LabelSettings_phbwc")
+
+[node name="DebugVehicleBody3D" parent="Control" instance=ExtResource("32_bvi33")]
+layout_mode = 1
+offset_bottom = 470.0
+node_vehiclebody3D = NodePath("../../Player")
+show_node_name = true
+
+[node name="DebugVehicleWheel3D" parent="Control" instance=ExtResource("33_htkxi")]
+layout_mode = 1
+offset_top = 500.0
+offset_bottom = 920.0
+front_wheel_left = NodePath("../../Player/WheelFL")
+front_wheel_right = NodePath("../../Player/WheelFR")
+rear_wheel_left = NodePath("../../Player/WheelRL")
+rear_wheel_right = NodePath("../../Player/WheelRR")
