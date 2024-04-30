@@ -1196,7 +1196,7 @@ directional_shadow_max_distance = 30.0
 directional_shadow_pancake_size = 0.0
 
 [node name="Water" type="MeshInstance3D" parent="World"]
-transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 2, -15, -2.2, -15)
+transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 2, 0.255722, -2.2, -8.65734)
 mesh = SubResource("BoxMesh_ev86x")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_wx30m")
@@ -1212,7 +1212,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_43wc4")
 
 [node name="Floor2" type="MeshInstance3D" parent="World"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -15, -2, -15)
+transform = Transform3D(0.8, 0, 0, 0, 1.5, 0, 0, 0, 1.2, -14, -2, -24)
 mesh = ExtResource("4_fl2e0")
 skeleton = NodePath("../..")
 
@@ -1259,6 +1259,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2, -16)
 
 [node name="cliff_half_rock16" parent="World/Cliffs" instance=ExtResource("2_n6s6i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -2, -16)
+
+[node name="cliff_half_rock54" parent="World/Cliffs" instance=ExtResource("2_n6s6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, -16)
 
 [node name="cliff_half_rock44" parent="World/Cliffs" instance=ExtResource("2_n6s6i")]
 transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 24, -3, -16)
@@ -1394,9 +1397,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.5, 0, -1, 0, -4.37114e-08, 34.5
 
 [node name="cliff_block_slope_rock" parent="World/Cliffs" instance=ExtResource("3_tasli")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16, -2, 16)
-
-[node name="cliff_block_slope_rock2" parent="World/Cliffs" instance=ExtResource("3_tasli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -2, -16)
 
 [node name="City" type="Node3D" parent="."]
 
@@ -2615,26 +2615,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 [node name="road_slant_curve" parent="City/Experiences/Roads" instance=ExtResource("34_bpyjk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18, -2, 0)
 
-[node name="road_straight" parent="City/Experiences/Roads" instance=ExtResource("1_2obj8")]
-transform = Transform3D(-4.37114e-08, 0, -5, 0, 1, 0, 1, 0, -2.18557e-07, -32, -2, 0)
-
 [node name="road_side_entry" parent="City/Experiences/Roads" instance=ExtResource("36_0ljps")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.75, -2, -8)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.75, -2, -8)
 
 [node name="road_side_exit" parent="City/Experiences/Roads" instance=ExtResource("37_g8id2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.75, -2, -40)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.75, -2, -40)
 
 [node name="road_side" parent="City/Experiences/Roads" instance=ExtResource("38_3b5o1")]
-transform = Transform3D(-3.0598e-07, 0, 1, 0, 1, 0, -7, 0, -4.37114e-08, -48.75, -2, -24)
+transform = Transform3D(-3.0598e-07, 0, 1, 0, 1, 0, -7, 0, -4.37114e-08, -28.75, -2, -24)
 
 [node name="road_curve" parent="City/Experiences/Roads" instance=ExtResource("1_bp8cq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -46, -2, -2)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26, -2, -2)
 
 [node name="road_curve3" parent="City/Experiences/Roads" instance=ExtResource("1_bp8cq")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -46, -2, -46)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -26, -2, -46)
 
 [node name="road_straight3" parent="City/Experiences/Roads" instance=ExtResource("1_2obj8")]
-transform = Transform3D(7.54979e-08, 0, 9, 0, 1, 0, -1, 0, 6.79481e-07, -24, -2, -48)
+transform = Transform3D(7.54979e-08, 0, 4, 0, 1, 0, -1, 0, 3.01992e-07, -14, -2, -48)
 
 [node name="road_straight4" parent="City/Experiences/Roads" instance=ExtResource("1_2obj8")]
 transform = Transform3D(1, 0, -1.19209e-06, 0, 1, 0, 2.38419e-07, 0, 5, 0, -2, -32)
@@ -2646,21 +2643,21 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -2, -2, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -18)
 
 [node name="tile_low4" parent="City/Experiences/Roads" instance=ExtResource("3_tfq4s")]
-transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 8.015, -41.8, -2, -24)
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 8.015, -21.8, -2, -24)
 
 [node name="Buildings" type="Node3D" parent="City/Experiences"]
 
 [node name="large_building_a" parent="City/Experiences/Buildings" instance=ExtResource("36_atnv1")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -41, -2, -12.6696)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -2, -12.6696)
 
 [node name="large_building_d" parent="City/Experiences/Buildings" instance=ExtResource("37_oju2f")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -41, -2, -29.4919)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -2, -29.4919)
 
 [node name="large_building_e" parent="City/Experiences/Buildings" instance=ExtResource("38_kq1h4")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -41, -2, -21.5164)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -2, -21.5164)
 
 [node name="small_building_d" parent="City/Experiences/Buildings" instance=ExtResource("39_medyc")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -41, -2, -37.05)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -2, -37.05)
 
 [node name="Nature" type="Node3D" parent="City/Experiences"]
 
