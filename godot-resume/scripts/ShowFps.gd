@@ -11,6 +11,7 @@ func _ready():
 				_label = child
 				break
 	assert(_label != null, "Must define label to show value")
+	
 
 func _process(delta):
 	_label.text = str(Engine.get_frames_per_second())

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5kbub1i25ejc"
+uid="uid://68hq6iffymed"
 path="res://.godot/imported/plant_flatShort.glb-59ab6bf3c510779d2382e2dcce854f41.scn"
 
 [deps]
@@ -29,6 +29,12 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:tmpParent/plant_flatShort": {
+"mesh_instance/visibility_range_end": 33.0
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

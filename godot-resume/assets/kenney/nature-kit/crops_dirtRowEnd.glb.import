@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ddwtuad7ab2rj"
+uid="uid://d0momwptun2qq"
 path="res://.godot/imported/crops_dirtRowEnd.glb-711c7d642a641720dcd2fb1753beccef.scn"
 
 [deps]
@@ -29,6 +29,12 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:tmpParent/crops_dirtRowEnd": {
+"mesh_instance/visibility_range_end": 33.0
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
