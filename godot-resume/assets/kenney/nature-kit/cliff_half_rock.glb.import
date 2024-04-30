@@ -32,7 +32,7 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:tmpParent/cliff_half_rock": {
-"mesh_instance/visibility_range_end": 33.0
+"mesh_instance/visibility_range_end": 35.0
 }
 }
 }

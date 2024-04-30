@@ -2637,7 +2637,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -46, -
 transform = Transform3D(7.54979e-08, 0, 9, 0, 1, 0, -1, 0, 6.79481e-07, -24, -2, -48)
 
 [node name="road_straight4" parent="City/Experiences/Roads" instance=ExtResource("1_2obj8")]
-transform = Transform3D(1, 0, -1.19209e-06, 0, 1, 0, 2.38419e-07, 0, 5, -1.43051e-06, -2, -31.9714)
+transform = Transform3D(1, 0, -1.19209e-06, 0, 1, 0, 2.38419e-07, 0, 5, 0, -2, -32)
 
 [node name="road_curve2" parent="City/Experiences/Roads" instance=ExtResource("1_bp8cq")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -2, -2, -46)
@@ -2674,7 +2674,7 @@ offset_rotation = Vector3(-45, -135, 0)
 [node name="Player" type="VehicleBody3D" parent="."]
 transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 12, 1, 0)
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.4, 0)
+center_of_mass = Vector3(0, 0.2, 0)
 can_sleep = false
 script = ExtResource("2_hp3v1")
 
@@ -2689,9 +2689,9 @@ shape = SubResource("ConvexPolygonShape3D_seupx")
 [node name="WheelFL" type="VehicleWheel3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.25, 0.75)
 use_as_steering = true
-wheel_radius = 0.32
-suspension_travel = 1.0
-suspension_stiffness = 20.0
+wheel_radius = 0.35
+suspension_travel = 0.8
+suspension_stiffness = 15.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFL"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
@@ -2700,9 +2700,9 @@ mesh = SubResource("CylinderMesh_3neeq")
 [node name="WheelFR" type="VehicleWheel3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.25, 0.75)
 use_as_steering = true
-wheel_radius = 0.32
-suspension_travel = 1.0
-suspension_stiffness = 20.0
+wheel_radius = 0.35
+suspension_travel = 0.8
+suspension_stiffness = 15.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFR"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
@@ -2711,9 +2711,9 @@ mesh = SubResource("CylinderMesh_3neeq")
 [node name="WheelRL" type="VehicleWheel3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.25, -0.75)
 use_as_traction = true
-wheel_radius = 0.32
-suspension_travel = 1.0
-suspension_stiffness = 20.0
+wheel_radius = 0.35
+suspension_travel = 0.8
+suspension_stiffness = 15.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRL"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
@@ -2722,9 +2722,9 @@ mesh = SubResource("CylinderMesh_3neeq")
 [node name="WheelRR" type="VehicleWheel3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.25, -0.75)
 use_as_traction = true
-wheel_radius = 0.32
-suspension_travel = 1.0
-suspension_stiffness = 20.0
+wheel_radius = 0.35
+suspension_travel = 0.8
+suspension_stiffness = 15.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRR"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
