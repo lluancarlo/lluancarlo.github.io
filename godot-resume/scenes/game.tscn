@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=145 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -48,6 +48,9 @@
 [ext_resource type="PackedScene" uid="uid://dox0d2biuxo6o" path="res://assets/scenes/roads/road_side.scn" id="38_3b5o1"]
 [ext_resource type="PackedScene" uid="uid://dnomm7cq0b3ip" path="res://assets/scenes/buildings/large_building_e.scn" id="38_kq1h4"]
 [ext_resource type="PackedScene" uid="uid://cli0k8aecvau5" path="res://assets/scenes/buildings/small_building_d.scn" id="39_medyc"]
+[ext_resource type="FontFile" uid="uid://uvipsqdhsfas" path="res://assets/kenney/ui-pack/Font/kenvector_future_thin.ttf" id="46_2m2hs"]
+[ext_resource type="Script" path="res://scripts/under_construction.gd" id="46_vj5br"]
+[ext_resource type="StyleBox" uid="uid://vwjj77sx78ms" path="res://assets/styles/panel.stylebox" id="49_abcsh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ev86x"]
 material = ExtResource("1_bdqam")
@@ -1171,6 +1174,73 @@ top_radius = 0.25
 bottom_radius = 0.25
 height = 0.2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld6m4"]
+bg_color = Color(0.998695, 0.652246, 0.105872, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.43134, 0.43134, 0.43134, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+shadow_size = 10
+anti_aliasing_size = 2.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_s2p4l"]
+font = ExtResource("46_2m2hs")
+font_size = 48
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t15v7"]
+font = ExtResource("46_2m2hs")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dnxp"]
+bg_color = Color(1, 0.65098, 0.105882, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.495566, 0.308714, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbpgm"]
+bg_color = Color(1, 0.838087, 0.655447, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.495566, 0.308714, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uevr"]
+bg_color = Color(0.718076, 0.455708, 3.85046e-07, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.495566, 0.308714, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="LabelSettings" id="LabelSettings_ylj7i"]
 font_size = 26
 font_color = Color(1, 1, 0, 1)
@@ -1193,7 +1263,6 @@ shadow_bias = 2.0
 shadow_opacity = 0.9
 directional_shadow_blend_splits = true
 directional_shadow_max_distance = 30.0
-directional_shadow_pancake_size = 0.0
 
 [node name="Water" type="MeshInstance3D" parent="World"]
 transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 2, 0.255722, -2.2, -8.65734)
@@ -1223,11 +1292,13 @@ shape = SubResource("ConcavePolygonShape3D_43wc4")
 
 [node name="Floor3" type="MeshInstance3D" parent="World"]
 transform = Transform3D(1.25, 0, 0, 0, 1.5, 0, 0, 0, 0.25, 17.75, 3, 43.25)
+visibility_range_end = 33.0
 mesh = ExtResource("4_fl2e0")
 skeleton = NodePath("../..")
 
 [node name="Floor4" type="MeshInstance3D" parent="World"]
 transform = Transform3D(-5.46392e-08, 0, -0.25, 0, 1.5, 0, 1.25, 0, -1.09278e-08, 42.75, 3, 17.25)
+visibility_range_end = 33.0
 mesh = ExtResource("4_fl2e0")
 skeleton = NodePath("../..")
 
@@ -2740,7 +2811,64 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Fps" type="HBoxContainer" parent="Control"]
+[node name="Popup" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.5
+offset_top = -231.0
+offset_right = 388.5
+offset_bottom = 231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("49_abcsh")
+script = ExtResource("46_vj5br")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Popup"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Popup/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ld6m4")
+
+[node name="Label" type="Label" parent="Control/Popup/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Under construction!"
+label_settings = SubResource("LabelSettings_s2p4l")
+
+[node name="Label" type="Label" parent="Control/Popup/VBoxContainer"]
+layout_mode = 2
+text = "Hello there!
+
+I am still working on this interactive resume. If you want, feel free to check it out but keep in mind that there are still lots of bugs to solve :)
+
+Thank you!"
+label_settings = SubResource("LabelSettings_t15v7")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Control/Popup/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("46_2m2hs")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_0dnxp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbpgm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6uevr")
+text = "Close"
+
+[node name="Debugs" type="Control" parent="Control"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fps" type="HBoxContainer" parent="Control/Debugs"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 20.0
@@ -2748,34 +2876,74 @@ offset_right = 112.0
 offset_bottom = 60.0
 script = ExtResource("31_bjc0q")
 
-[node name="Label" type="Label" parent="Control/Fps"]
+[node name="Label" type="Label" parent="Control/Debugs/Fps"]
 layout_mode = 2
 text = "FPS: "
 label_settings = SubResource("LabelSettings_ylj7i")
 
-[node name="Value" type="Label" parent="Control/Fps"]
+[node name="Value" type="Label" parent="Control/Debugs/Fps"]
 layout_mode = 2
 text = "96"
 label_settings = SubResource("LabelSettings_phbwc")
 
-[node name="DebugPerformance" parent="Control" instance=ExtResource("37_j6ptu")]
+[node name="DebugPerformance" parent="Control/Debugs" instance=ExtResource("37_j6ptu")]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 60.0
 offset_right = 270.0
 offset_bottom = 260.0
 
-[node name="DebugVehicleBody3D" parent="Control" instance=ExtResource("32_bvi33")]
+[node name="DebugVehicleBody3D" parent="Control/Debugs" instance=ExtResource("32_bvi33")]
 layout_mode = 1
+offset_left = 1500.0
+offset_right = 1850.0
 offset_bottom = 470.0
-node_vehiclebody3D = NodePath("../../Player")
+node_vehiclebody3D = NodePath("../../../Player")
 show_node_name = true
 
-[node name="DebugVehicleWheel3D" parent="Control" instance=ExtResource("33_htkxi")]
+[node name="DebugVehicleWheel3D" parent="Control/Debugs" instance=ExtResource("33_htkxi")]
 layout_mode = 1
+offset_left = 1500.0
 offset_top = 500.0
+offset_right = 1850.0
 offset_bottom = 920.0
-front_wheel_left = NodePath("../../Player/WheelFL")
-front_wheel_right = NodePath("../../Player/WheelFR")
-rear_wheel_left = NodePath("../../Player/WheelRL")
-rear_wheel_right = NodePath("../../Player/WheelRR")
+front_wheel_left = NodePath("../../../Player/WheelFL")
+front_wheel_right = NodePath("../../../Player/WheelFR")
+rear_wheel_left = NodePath("../../../Player/WheelRL")
+rear_wheel_right = NodePath("../../../Player/WheelRR")
+
+[node name="ControlTest" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="ControlTest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -519.0
+offset_top = -405.0
+offset_right = 519.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("49_abcsh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlTest/PanelContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ControlTest/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ld6m4")
+
+[connection signal="pressed" from="Control/Popup/VBoxContainer/Button" to="Control/Popup" method="_on_button_pressed"]
