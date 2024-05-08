@@ -10,7 +10,6 @@ class_name DebugVehicleBody3D
 @onready var _ref_vehiclebody3d = get_node(node_vehiclebody3D) as VehicleBody3D
 @onready var _label := $Content/Title/Value as Label
 @onready var _motion := $Content/Motion as HBoxContainer
-@onready var _motion_label := $Content/Motion/Label as Label
 @onready var _motion_engine_force := $Content/Motion/EngineForce/Value as Label
 @onready var _motion_brake := $Content/Motion/Brake/Value as Label
 @onready var _motion_steering := $Content/Motion/Steering/Value as Label

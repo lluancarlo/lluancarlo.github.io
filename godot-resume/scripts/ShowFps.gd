@@ -13,5 +13,5 @@ func _ready():
 	assert(_label != null, "Must define label to show value")
 	
 
-func _process(delta):
+func _process(_delta):
 	_label.text = str(Engine.get_frames_per_second())

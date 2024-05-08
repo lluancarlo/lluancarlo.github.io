@@ -14,7 +14,6 @@ class_name DebugVehicleWheel3D
 @onready var _front_ref_wheel_r = get_node(front_wheel_right) as VehicleWheel3D
 @onready var _rear_ref_wheel_l = get_node(rear_wheel_left) as VehicleWheel3D
 @onready var _rear_ref_wheel_r = get_node(rear_wheel_right) as VehicleWheel3D
-@onready var _label := $Content/Title/Value as Label
 @onready var _tab_front := $Front as DebugVehicleWheel3DTab
 @onready var _tab_rear := $Rear as DebugVehicleWheel3DTab
 
