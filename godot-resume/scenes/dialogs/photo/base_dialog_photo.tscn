@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bdqq5jmdyf4i5"]
+[gd_scene load_steps=12 format=3 uid="uid://csqwlgoc8n3ea"]
 
-[ext_resource type="StyleBox" uid="uid://vwjj77sx78ms" path="res://assets/styles/panel.stylebox" id="1_lv17a"]
-[ext_resource type="Script" path="res://scripts/CustomPopup.gd" id="2_u2ypc"]
-[ext_resource type="LabelSettings" uid="uid://cx543th5c70vg" path="res://assets/styles/dialog_title_label.res" id="3_id5s3"]
-[ext_resource type="Texture2D" uid="uid://bpkubgvvqftqw" path="res://assets/kenney/ui-pack/PNG/grey_crossWhite.png" id="4_b8tge"]
-[ext_resource type="Texture2D" uid="uid://dohmkqjl8x4yn" path="res://assets/kenney/ui-pack/PNG/grey_crossGrey.png" id="5_1yiu1"]
-[ext_resource type="Texture2D" uid="uid://8ntblw87ojwi" path="res://assets/img/university.png" id="6_be4ea"]
-[ext_resource type="LabelSettings" uid="uid://c5m2syvcfelod" path="res://assets/styles/dialog_content_label.res" id="7_qfmmb"]
+[ext_resource type="StyleBox" uid="uid://vwjj77sx78ms" path="res://assets/styles/panel.stylebox" id="1_w6cuk"]
+[ext_resource type="Script" path="res://scripts/CustomPopup.gd" id="2_ht071"]
+[ext_resource type="LabelSettings" uid="uid://cx543th5c70vg" path="res://assets/styles/dialog_title_label.res" id="3_s6ri6"]
+[ext_resource type="Texture2D" uid="uid://bpkubgvvqftqw" path="res://assets/kenney/ui-pack/PNG/grey_crossWhite.png" id="4_mse6r"]
+[ext_resource type="Texture2D" uid="uid://dohmkqjl8x4yn" path="res://assets/kenney/ui-pack/PNG/grey_crossGrey.png" id="5_myi47"]
+[ext_resource type="LabelSettings" uid="uid://c5m2syvcfelod" path="res://assets/styles/dialog_content_label.res" id="6_2m761"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld6m4"]
 bg_color = Color(0, 0.801012, 0.861656, 1)
@@ -39,18 +38,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(441, 135)]
-}
 
 [sub_resource type="Animation" id="Animation_2q6ed"]
 resource_name = "close"
@@ -66,18 +53,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(441, 135), Vector2(882, 135)]
 }
 
 [sub_resource type="Animation" id="Animation_33xwc"]
@@ -95,18 +70,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, 1), Vector2(1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(882, 135), Vector2(441, 135)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_et8fv"]
 _data = {
@@ -115,22 +78,20 @@ _data = {
 "open": SubResource("Animation_33xwc")
 }
 
-[node name="UniversityPopup" type="PanelContainer"]
+[node name="BaseDialogPhoto" type="PanelContainer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -519.0
-offset_top = -405.0
+offset_top = -297.5
 offset_right = 519.0
-offset_bottom = 190.0
+offset_bottom = 297.5
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = ExtResource("1_lv17a")
-script = ExtResource("2_u2ypc")
+theme_override_styles/panel = ExtResource("1_w6cuk")
+script = ExtResource("2_ht071")
 
 [node name="VBox" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -144,16 +105,17 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ld6m4")
 [node name="Title" type="Label" parent="VBox/Header"]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "Graduation?"
-label_settings = ExtResource("3_id5s3")
+text = "Title
+"
+label_settings = ExtResource("3_s6ri6")
 
 [node name="Close" type="TextureButton" parent="VBox/Header"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 8
-texture_normal = ExtResource("4_b8tge")
-texture_pressed = ExtResource("4_b8tge")
-texture_hover = ExtResource("5_1yiu1")
+texture_normal = ExtResource("4_mse6r")
+texture_pressed = ExtResource("4_mse6r")
+texture_hover = ExtResource("5_myi47")
 stretch_mode = 5
 
 [node name="Content" type="VBoxContainer" parent="VBox"]
@@ -163,15 +125,14 @@ theme_override_constants/separation = 20
 [node name="Image" type="TextureRect" parent="VBox/Content"]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
-texture = ExtResource("6_be4ea")
 expand_mode = 2
 stretch_mode = 5
 
 [node name="Text" type="Label" parent="VBox/Content"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-text = "Yes, I have a degree on Science Computer. I finish it on 2018 at University Estacio, in Ribeirão Preto."
-label_settings = ExtResource("7_qfmmb")
+text = "Description"
+label_settings = ExtResource("6_2m761")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
