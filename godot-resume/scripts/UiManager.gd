@@ -1,7 +1,11 @@
 extends Control
+class_name UiManager
 
 @export var player : PlayerCar
+@export_group(&"Sub UI")
 @export var debug_panel : Control
+@export var hud_area_overlay : AreaOverlay
+@export_group(&"Dialogs")
 @export var warning_dialog : BasePopup
 @export var where_born_dialog : BasePopup
 @export var where_living_dialog : BasePopup
@@ -48,7 +52,6 @@ func _on_interactive_pressed() -> void:
 	elif GameData.on_popup_id != 0:
 		open_popup(GameData.on_popup_id)
 		player.can_drive = false
-	
 
 func _on_warning_popup_close() -> void:
 	debug_panel.visible = true
@@ -56,3 +59,6 @@ func _on_warning_popup_close() -> void:
 func _on_closed() -> void:
 	opened_popup = null
 	player.can_drive = true
+
+func show_area_overlay(area_name: String) -> void:
+	hud_area_overlay.show_new_area(area_name)
