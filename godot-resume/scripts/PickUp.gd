@@ -19,7 +19,6 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	print(str(get_instance_id()) + " is " + str(player_nearby))
 	if player_nearby:
 		acc = 0
 		change_colors(interaction_color);

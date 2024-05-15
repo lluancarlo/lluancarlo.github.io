@@ -1,4 +1,4 @@
-[gd_scene load_steps=152 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=157 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -49,9 +49,14 @@
 [ext_resource type="PackedScene" uid="uid://dox0d2biuxo6o" path="res://assets/scenes/roads/road_side.scn" id="38_3b5o1"]
 [ext_resource type="PackedScene" uid="uid://dnomm7cq0b3ip" path="res://assets/scenes/buildings/large_building_e.scn" id="38_kq1h4"]
 [ext_resource type="PackedScene" uid="uid://cli0k8aecvau5" path="res://assets/scenes/buildings/small_building_d.scn" id="39_medyc"]
+[ext_resource type="PackedScene" uid="uid://cfrdc368p2ciw" path="res://tools/brush/BrushGrass.tscn" id="44_1jj0s"]
+[ext_resource type="PackedScene" uid="uid://c3gqnt4pncokt" path="res://assets/scenes/natures/grass_2.scn" id="45_8rigp"]
+[ext_resource type="PackedScene" uid="uid://bubwk0xndw1c8" path="res://assets/scenes/natures/grass_3.scn" id="46_4acse"]
 [ext_resource type="Script" path="res://scripts/UiManager.gd" id="46_nk40p"]
 [ext_resource type="PackedScene" uid="uid://disu76fpgt3pa" path="res://scenes/dialogs/photo/where_born.tscn" id="47_5vjek"]
 [ext_resource type="PackedScene" uid="uid://odldxscmlbwu" path="res://scenes/dialogs/warning.tscn" id="47_jlgjs"]
+[ext_resource type="PackedScene" uid="uid://kccn4wtmnqxo" path="res://tools/brush/BrushTree.tscn" id="47_wo0e5"]
+[ext_resource type="PackedScene" uid="uid://d2jsuu3kmmu33" path="res://assets/scenes/natures/tree_palm_tall.scn" id="48_bs7bt"]
 [ext_resource type="PackedScene" uid="uid://bd6hoe1geynij" path="res://scenes/dialogs/photo/where_living.tscn" id="48_ve5t5"]
 [ext_resource type="PackedScene" uid="uid://bdqq5jmdyf4i5" path="res://scenes/dialogs/photo/university.tscn" id="49_dmpl8"]
 [ext_resource type="PackedScene" uid="uid://dcdlodypf3vm3" path="res://scenes/dialogs/exp/exp_consinco.tscn" id="50_fls2k"]
@@ -2721,6 +2726,496 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -2, -37.05)
 
 [node name="Nature" type="Node3D" parent="City/Experiences"]
+
+[node name="Props" type="Node3D" parent="City/Experiences/Nature"]
+
+[node name="fence_planks_double13" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, 3.796)
+
+[node name="fence_planks_double48" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -31.9136, -2, 5.796)
+
+[node name="fence_planks_double49" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -27.9136, -2, 5.796)
+
+[node name="fence_planks_double50" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -23.9136, -2, 5.796)
+
+[node name="fence_planks_double51" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -19.9136, -2, 5.796)
+
+[node name="fence_planks_double52" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -15.9136, -2, 5.796)
+
+[node name="fence_planks_double14" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -0.204002)
+
+[node name="fence_planks_double15" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -4.204)
+
+[node name="fence_planks_double16" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -8.204)
+
+[node name="fence_planks_double17" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -12.204)
+
+[node name="fence_planks_double18" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -16.204)
+
+[node name="fence_planks_double19" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -20.204)
+
+[node name="fence_planks_double20" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -24.204)
+
+[node name="fence_planks_double21" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -28.204)
+
+[node name="fence_planks_double22" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -32.204)
+
+[node name="fence_planks_double23" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -35.204)
+
+[node name="fence_planks_double24" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -39.204)
+
+[node name="fence_planks_double25" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -43.204)
+
+[node name="fence_planks_double26" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -47.204)
+
+[node name="fence_planks_double27" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -51.204)
+
+[node name="fence_planks_double28" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -32.0114, -2, -53.8939)
+
+[node name="fence_planks_double29" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -28.0114, -2, -53.8939)
+
+[node name="fence_planks_double30" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -24.0114, -2, -53.8939)
+
+[node name="fence_planks_double31" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -20.0114, -2, -53.8939)
+
+[node name="fence_planks_double32" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -16.0114, -2, -53.8939)
+
+[node name="fence_planks_double33" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -12.0114, -2, -53.8939)
+
+[node name="fence_planks_double34" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -8.01139, -2, -53.8939)
+
+[node name="fence_planks_double35" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -4.01139, -2, -53.8939)
+
+[node name="fence_planks_double36" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -0.0113945, -2, -53.8939)
+
+[node name="fence_planks_double37" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 3.98861, -2, -53.8939)
+
+[node name="fence_planks_double38" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -51.8939)
+
+[node name="fence_planks_double39" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -47.8939)
+
+[node name="fence_planks_double40" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -43.8939)
+
+[node name="fence_planks_double41" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -39.8939)
+
+[node name="fence_planks_double42" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -35.8939)
+
+[node name="fence_planks_double43" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -31.8939)
+
+[node name="fence_planks_double44" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -27.8939)
+
+[node name="fence_planks_double45" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -23.8939)
+
+[node name="fence_planks_double46" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -19.8939)
+
+[node name="fence_planks_double47" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -15.8939)
+
+[node name="Low" type="Node3D" parent="City/Experiences/Nature"]
+
+[node name="BrushGrass" parent="City/Experiences/Nature/Low" instance=ExtResource("44_1jj0s")]
+
+[node name="BrushGrass_1715802453_376" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.385806, 0, -0.498449, 0, 0.630315, 0, 0.498449, 0, -0.385806, -19.5558, -2, -50.6553)
+
+[node name="BrushGrass_1715802453_377" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.136045, 0, 0.850354, 0, 0.861168, 0, -0.850354, 0, 0.136045, -19.2188, -2, -50.2036)
+
+[node name="BrushGrass_1715802453_863" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.913157, 0, 0.258494, 0, 0.949039, 0, -0.258494, 0, -0.913157, -15.302, -2, -51.7937)
+
+[node name="BrushGrass_1715802453_864" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.532537, 0, 0.341551, 0, 0.632655, 0, -0.341551, 0, 0.532537, -15.4215, -2, -52.315)
+
+[node name="BrushGrass_1715802454_305" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.892813, 0, -0.345178, 0, 0.957216, 0, 0.345178, 0, -0.892813, -20.4323, -2, -52.1951)
+
+[node name="BrushGrass_1715802454_306" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.617217, 0, 0.0137485, 0, 0.61737, 0, -0.0137485, 0, 0.617217, -20.4962, -2, -51.3616)
+
+[node name="BrushGrass_1715802455_324" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.38571, 0, 0.950404, 0, 1.02569, 0, -0.950404, 0, -0.38571, -6.04328, -2, -51.4864)
+
+[node name="BrushGrass_1715802455_325" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.265795, 0, 0.909036, 0, 0.947097, 0, -0.909036, 0, 0.265795, -3.48242, -2, -52.5296)
+
+[node name="BrushGrass_1715802456_124" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.0227744, 0, 0.721279, 0, 0.721639, 0, -0.721279, 0, -0.0227744, 0.0523834, -2, -50.1392)
+
+[node name="BrushGrass_1715802456_125" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.55801, 0, 0.584619, 0, 0.808179, 0, -0.584619, 0, 0.55801, 0.217752, -2, -51.9359)
+
+[node name="BrushGrass_1715802456_522" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.438389, 0, -0.32531, 0, 0.545904, 0, 0.32531, 0, -0.438389, 4.68096, -2, -48.3865)
+
+[node name="BrushGrass_1715802456_523" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.342762, 0, -0.493856, 0, 0.601148, 0, 0.493856, 0, -0.342762, 3.64991, -2, -47.9387)
+
+[node name="BrushGrass_1715802457_905" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.493756, 0, -0.267875, 0, 0.56174, 0, 0.267875, 0, 0.493756, 4.04676, -2, -43.6224)
+
+[node name="BrushGrass_1715802457_906" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.806021, 0, -0.747158, 0, 1.09905, 0, 0.747158, 0, -0.806021, 3.7377, -2, -43.8567)
+
+[node name="BrushGrass_1715802460_227" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.482272, 0, -0.321247, 0, 0.57947, 0, 0.321247, 0, 0.482272, 3.74787, -2, -34.2101)
+
+[node name="BrushGrass_1715802460_228" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.539893, 0, 0.446526, 0, 0.700621, 0, -0.446526, 0, 0.539893, 5.20515, -2, -33.6441)
+
+[node name="BrushGrass_1715802462_424" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.645081, 0, 0.692779, 0, 0.946611, 0, -0.692779, 0, 0.645081, 3.16776, -2, -23.3366)
+
+[node name="BrushGrass_1715802462_425" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.64572, 0, 0.775487, 0, 1.00913, 0, -0.775487, 0, 0.64572, 3.34419, -2, -23.1411)
+
+[node name="BrushGrass_1715802462_787" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.780363, 0, -0.1765, 0, 0.800075, 0, 0.1765, 0, -0.780363, 4.17807, -2, -19.4088)
+
+[node name="BrushGrass_1715802462_788" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.256176, 0, 0.770872, 0, 0.812324, 0, -0.770872, 0, -0.256176, 5.33361, -2, -17.1615)
+
+[node name="BrushGrass_1715802465_795" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.831754, 0, 0.724154, 0, 1.10282, 0, -0.724154, 0, -0.831754, -4.7034, -2, -20.546)
+
+[node name="BrushGrass_1715802465_796" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.583653, 0, -0.774624, 0, 0.969894, 0, 0.774624, 0, -0.583653, -5.44064, -2, -19.2874)
+
+[node name="BrushGrass_1715802466_067" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.806927, 0, 0.804636, 0, 1.13955, 0, -0.804636, 0, -0.806927, -5.34973, -2, -24.7932)
+
+[node name="BrushGrass_1715802466_068" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.153419, 0, -0.836769, 0, 0.850718, 0, 0.836769, 0, 0.153419, -4.22809, -2, -25.2017)
+
+[node name="BrushGrass_1715802466_287" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.00171949, 0, -0.649247, 0, 0.649249, 0, 0.649247, 0, 0.00171949, -3.11704, -2, -30.1336)
+
+[node name="BrushGrass_1715802466_288" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.465052, 0, 0.599287, 0, 0.758563, 0, -0.599287, 0, 0.465052, -3.93637, -2, -29.0502)
+
+[node name="BrushGrass_1715802466_51" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.681175, 0, 0.777506, 0, 1.03369, 0, -0.777506, 0, 0.681175, -3.42285, -2, -31.23)
+
+[node name="BrushGrass_1715802466_52" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.990688, 0, 0.145443, 0, 1.00131, 0, -0.145443, 0, 0.990688, -2.81838, -2, -30.4986)
+
+[node name="BrushGrass_1715802466_779" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.168674, 0, -0.725112, 0, 0.744472, 0, 0.725112, 0, 0.168674, -2.80256, -2, -34.4683)
+
+[node name="BrushGrass_1715802466_780" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.305082, 0, -0.574946, 0, 0.650875, 0, 0.574946, 0, 0.305082, -3.12366, -2, -32.9558)
+
+[node name="BrushGrass_1715802467_004" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.776889, 0, 0.783612, 0, 1.10345, 0, -0.783612, 0, 0.776889, -6.03551, -2, -37.6685)
+
+[node name="BrushGrass_1715802467_005" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.938362, 0, 0.117411, 0, 0.945679, 0, -0.117411, 0, 0.938362, -3.85245, -2, -38.0306)
+
+[node name="BrushGrass_1715802468_62" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.919659, 0, -0.393808, 0, 1.00043, 0, 0.393808, 0, -0.919659, -6.92956, -2, -42.87)
+
+[node name="BrushGrass_1715802468_621" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.563417, 0, 0.179711, 0, 0.591384, 0, -0.179711, 0, -0.563417, -7.72366, -2, -44.0511)
+
+[node name="BrushGrass_1715802468_899" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.382624, 0, 0.743651, 0, 0.836312, 0, -0.743651, 0, 0.382624, -10.3927, -2, -44.0322)
+
+[node name="BrushGrass_1715802468_9" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.354869, 0, 0.565201, 0, 0.667371, 0, -0.565201, 0, -0.354869, -11.4211, -2, -43.8269)
+
+[node name="BrushGrass_1715802469_386" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.137483, 0, -0.530008, 0, 0.54755, 0, 0.530008, 0, -0.137483, -12.7624, -2, -42.2595)
+
+[node name="BrushGrass_1715802469_387" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.0698018, 0, -0.872376, 0, 0.875165, 0, 0.872376, 0, -0.0698018, -15.1886, -2, -42.156)
+
+[node name="BrushGrass_1715802470_729" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.448443, 0, -0.613781, 0, 0.760151, 0, 0.613781, 0, -0.448443, -21.2998, -2, -42.1783)
+
+[node name="BrushGrass_1715802470_730" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(1.18711, 0, 0.0518881, 0, 1.18824, 0, -0.0518881, 0, 1.18711, -22.5274, -2, -42.986)
+
+[node name="BrushGrass_1715802476_228" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.016496, 0, -0.956462, 0, 0.956605, 0, 0.956462, 0, -0.016496, -33.1013, -2, -38.4467)
+
+[node name="BrushGrass_1715802476_229" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.547024, 0, 0.795842, 0, 0.965712, 0, -0.795842, 0, 0.547024, -30.8658, -2, -37.332)
+
+[node name="BrushGrass_1715802476_634" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.921294, 0, 0.133625, 0, 0.930934, 0, -0.133625, 0, 0.921294, -31.9989, -2, -36.6242)
+
+[node name="BrushGrass_1715802476_635" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(1.00516, 0, -0.380812, 0, 1.07488, 0, 0.380812, 0, 1.00516, -33.0493, -2, -37.6939)
+
+[node name="BrushGrass_1715802639_432" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.870983, 0, 0.351921, 0, 0.939393, 0, -0.351921, 0, -0.870983, -18.0443, -2, -26.203)
+
+[node name="BrushGrass_1715802639_433" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.388541, 0, -1.11102, 0, 1.177, 0, 1.11102, 0, 0.388541, -15.4477, -1.52141, -24.7511)
+
+[node name="BrushGrass_1715802640_079" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.384213, 0, 0.945442, 0, 1.02053, 0, -0.945442, 0, 0.384213, -16.1996, -2, -29.1995)
+
+[node name="BrushGrass_1715802640_080" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.222373, 0, 0.754357, 0, 0.786451, 0, -0.754357, 0, -0.222373, -15.489, -2, -30.5327)
+
+[node name="BrushGrass_1715802640_609" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.335184, 0, 0.860718, 0, 0.923679, 0, -0.860718, 0, 0.335184, -16.6984, -2, -34.2962)
+
+[node name="BrushGrass_1715802640_610" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(-0.603309, 0, -0.893664, 0, 1.07825, 0, 0.893664, 0, -0.603309, -16.8781, -2, -31.7715)
+
+[node name="BrushGrass_1715802641_932" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(0.820203, 0, 0.568631, 0, 0.998035, 0, -0.568631, 0, 0.820203, -16.5978, -2, -38.0947)
+
+[node name="BrushGrass_1715802641_933" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.55157, 0, 0.514541, 0, 0.754309, 0, -0.514541, 0, -0.55157, -17.2845, -2, -39.576)
+
+[node name="BrushGrass_1715802645_59" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.482882, 0, -0.192734, 0, 0.519925, 0, 0.192734, 0, -0.482882, -17.4155, -2, -15.6398)
+
+[node name="BrushGrass_1715802645_60" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("46_4acse")]
+transform = Transform3D(0.767508, 0, 0.599592, 0, 0.973951, 0, -0.599592, 0, 0.767508, -16.135, -2, -17.3102)
+
+[node name="BrushGrass_1715802646_13" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(-0.538699, 0, -0.303527, 0, 0.618325, 0, 0.303527, 0, -0.538699, -18.0874, -2, -20.0548)
+
+[node name="BrushGrass_1715802646_14" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.90398, 0, 0.126997, 0, 0.912858, 0, -0.126997, 0, 0.90398, -17.0504, -2, -20.2141)
+
+[node name="BrushGrass_1715802646_665" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("12_r0q7x")]
+transform = Transform3D(-0.103978, 0, -1.01556, 0, 1.02087, 0, 1.01556, 0, -0.103978, -16.8751, -2, -22.6189)
+
+[node name="BrushGrass_1715802646_666" type="Node3D" parent="City/Experiences/Nature/Low/BrushGrass" instance=ExtResource("45_8rigp")]
+transform = Transform3D(0.00652415, 0, -0.674785, 0, 0.674817, 0, 0.674785, 0, 0.00652415, -16.5378, -2, -23.2932)
+
+[node name="BrushTree" parent="City/Experiences/Nature/Low" instance=ExtResource("47_wo0e5")]
+
+[node name="BrushTree_1715802489_948" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("48_bs7bt")]
+transform = Transform3D(0.278588, 0, 0.760086, 0, 0.809532, 0, -0.760086, 0, 0.278588, -20.5176, -2, -4.6623)
+
+[node name="BrushTree_1715802490_723" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(0.837488, 0, -0.170221, 0, 0.854611, 0, 0.170221, 0, 0.837488, -21.9794, -2, -4.28843)
+
+[node name="BrushTree_1715802494_009" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(-0.69403, 0, -0.886516, 0, 1.12587, 0, 0.886516, 0, -0.69403, -25.9487, -2, 3.46064)
+
+[node name="BrushTree_1715802494_63" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(0.201982, 0, -1.06281, 0, 1.08183, 0, 1.06281, 0, 0.201982, -30.0836, -2, -0.664198)
+
+[node name="BrushTree_1715802497_444" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-1.04119, 0, -0.112037, 0, 1.0472, 0, 0.112037, 0, -1.04119, -31.5474, -2, -14.8949)
+
+[node name="BrushTree_1715802500_86" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("48_bs7bt")]
+transform = Transform3D(-0.8176, 0, -0.396585, 0, 0.908708, 0, 0.396585, 0, -0.8176, -32.3331, -2, -6.49059)
+
+[node name="BrushTree_1715802503_05" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(0.0833583, 0, -0.797332, 0, 0.801678, 0, 0.797332, 0, 0.0833583, -31.3394, -2, -18.7009)
+
+[node name="BrushTree_1715802503_631" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(0.259798, 0, 0.811441, 0, 0.852016, 0, -0.811441, 0, 0.259798, -32.8469, -2, -25.3208)
+
+[node name="BrushTree_1715802504_255" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-0.687993, 0, 0.819919, 0, 1.07033, 0, -0.819919, 0, -0.687993, -30.1853, -2, -30.631)
+
+[node name="BrushTree_1715802508_17" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(-1.07679, 0, -0.262486, 0, 1.10832, 0, 0.262486, 0, -1.07679, -30.9244, -2, -34.1102)
+
+[node name="BrushTree_1715802508_755" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("48_bs7bt")]
+transform = Transform3D(-0.702857, 0, 0.580736, 0, 0.911735, 0, -0.580736, 0, -0.702857, -31.0201, -2, -40.3763)
+
+[node name="BrushTree_1715802509_289" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("6_1wlq4")]
+transform = Transform3D(0.586895, 0, 0.786104, 0, 0.981022, 0, -0.786104, 0, 0.586895, -32.416, -2, -44.3138)
+
+[node name="BrushTree_1715802511_914" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("6_1wlq4")]
+transform = Transform3D(-0.324609, 0, -0.913412, 0, 0.969377, 0, 0.913412, 0, -0.324609, -29.6488, -2, -50.8582)
+
+[node name="BrushTree_1715802513_505" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(-0.876177, 0, 0.0845355, 0, 0.880246, 0, -0.0845355, 0, -0.876177, -19.3805, -2, -53.0089)
+
+[node name="BrushTree_1715802514_19" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(0.495151, 0, 0.646051, 0, 0.813975, 0, -0.646051, 0, 0.495151, -14.5555, -2, -51.1183)
+
+[node name="BrushTree_1715802514_678" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(-1.15554, 0, 0.152805, 0, 1.1656, 0, -0.152805, 0, -1.15554, -1.55162, -2, -50.7737)
+
+[node name="BrushTree_1715802516_192" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(1.01404, 0, 0.269264, 0, 1.04919, 0, -0.269264, 0, 1.01404, 3.02388, -2, -50.7335)
+
+[node name="BrushTree_1715802517_699" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-1.07567, 0, -0.152328, 0, 1.0864, 0, 0.152328, 0, -1.07567, 4.15749, -2, -42.4904)
+
+[node name="BrushTree_1715802519_127" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(0.248714, 0, -1.03488, 0, 1.06434, 0, 1.03488, 0, 0.248714, 4.32075, -2, -34.715)
+
+[node name="BrushTree_1715802525_584" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-0.858764, 0, 0.604665, 0, 1.05028, 0, -0.604665, 0, -0.858764, 5.00562, -2, -27.6442)
+
+[node name="BrushTree_1715802527_957" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-0.129317, 0, 0.947202, 0, 0.955989, 0, -0.947202, 0, -0.129317, -5.93239, -2, -20.1477)
+
+[node name="BrushTree_1715802528_351" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(-0.224119, 0, -1.00686, 0, 1.03151, 0, 1.00686, 0, -0.224119, -6.29198, -2, -23.2777)
+
+[node name="BrushTree_1715802528_691" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(-0.763504, 0, 0.755917, 0, 1.07441, 0, -0.755917, 0, -0.763504, -3.89966, -2, -32.4928)
+
+[node name="BrushTree_1715802529_136" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("6_1wlq4")]
+transform = Transform3D(-0.843309, 0, -0.509142, 0, 0.985087, 0, 0.509142, 0, -0.843309, -6.50893, -2, -35.2298)
+
+[node name="BrushTree_1715802530_32" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(0.967658, 0, 0.656993, 0, 1.16962, 0, -0.656993, 0, 0.967658, -7.19745, -2, -42.5829)
+
+[node name="BrushTree_1715802533_337" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-1.05482, 0, 0.165558, 0, 1.06773, 0, -0.165558, 0, -1.05482, -23.1024, -2, -44.3017)
+
+[node name="BrushTree_1715802533_958" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(1.16332, 0, -0.161601, 0, 1.17449, 0, 0.161601, 0, 1.16332, -19.9119, -2, -45.4146)
+
+[node name="BrushTree_1715802535_503" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(0.102509, 0, -1.13379, 0, 1.13841, 0, 1.13379, 0, 0.102509, -11.1922, -2, -44.3366)
+
+[node name="BrushTree_1715802537_605" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(1.04932, 0, 0.325824, 0, 1.09874, 0, -0.325824, 0, 1.04932, -4.08315, -2, -41.329)
+
+[node name="BrushTree_1715802540_232" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(0.207323, 0, -1.03727, 0, 1.05778, 0, 1.03727, 0, 0.207323, -4.43771, -2, -27.2706)
+
+[node name="BrushTree_1715802543_707" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("6_1wlq4")]
+transform = Transform3D(-0.998074, 0, 0.116669, 0, 1.00487, 0, -0.116669, 0, -0.998074, -7.85081, -2, -52.0317)
+
+[node name="BrushTree_1715802628_641" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(-1.00651, 0, -0.22946, 0, 1.03234, 0, 0.22946, 0, -1.00651, -17.1716, -2, -31.2321)
+
+[node name="BrushTree_1715802629_952" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
+transform = Transform3D(0.485194, 0, -0.75947, 0, 0.901226, 0, 0.75947, 0, 0.485194, -17.0387, -2, -38.2811)
+
+[node name="BrushTree_1715802632_349" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("5_f5xax")]
+transform = Transform3D(-0.811212, 0, -0.0586361, 0, 0.813329, 0, 0.0586361, 0, -0.811212, -16.1136, -2, -16.1623)
+
+[node name="BrushTree_1715802635_107" type="Node3D" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
+transform = Transform3D(-0.266741, 0, 1.1347, 0, 1.16563, 0, -1.1347, 0, -0.266741, -15.7274, -2, -23.2448)
+
+[node name="BrushRock" parent="City/Experiences/Nature/Low" instance=ExtResource("15_mt5tk")]
+
+[node name="BrushRock_1715802553_701" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("18_1vkoj")]
+transform = Transform3D(-0.150256, 0, -0.988647, 0, 1, 0, 0.988647, 0, -0.150256, -23.1782, -2, -6.15787)
+
+[node name="BrushRock_1715802555_924" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(-0.977233, 0, -0.212171, 0, 1, 0, 0.212171, 0, -0.977233, -19.5298, -2, 3.70284)
+
+[node name="BrushRock_1715802563_194" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.589638, 0, -0.807668, 0, 1, 0, 0.807668, 0, 0.589638, -33.0821, -2, -4.05684)
+
+[node name="BrushRock_1715802564_494" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.938435, 0, -0.345456, 0, 1, 0, 0.345456, 0, 0.938435, -28.0908, -2, 1.11508)
+
+[node name="BrushRock_1715802570_565" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.370049, 0, 0.929012, 0, 1, 0, -0.929012, 0, 0.370049, -32.1764, -2, -11.6644)
+
+[node name="BrushRock_1715802572_159" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("8_a5huh")]
+transform = Transform3D(-0.366501, 0, -0.930418, 0, 1, 0, 0.930418, 0, -0.366501, -31.7906, -2, -21.7091)
+
+[node name="BrushRock_1715802574_678" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.857896, 0, 0.513824, 0, 1, 0, -0.513824, 0, 0.857896, -33.2208, -2, -31.5696)
+
+[node name="BrushRock_1715802575_442" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.00641731, 0, 0.999979, 0, 1, 0, -0.999979, 0, 0.00641731, -31.0638, -2, -27.5864)
+
+[node name="BrushRock_1715802577_211" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("8_a5huh")]
+transform = Transform3D(-0.0416155, 0, 0.999134, 0, 1, 0, -0.999134, 0, -0.0416155, -31.9915, -2, -36.8052)
+
+[node name="BrushRock_1715802579_344" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("18_1vkoj")]
+transform = Transform3D(-0.909932, 0, -0.414757, 0, 1, 0, 0.414757, 0, -0.909932, -31.6294, -2, -47.6956)
+
+[node name="BrushRock_1715802580_384" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.999674, 0, 0.0255173, 0, 1, 0, -0.0255173, 0, 0.999674, -24.2184, -2, -52.1349)
+
+[node name="BrushRock_1715802582_132" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.972223, 0, 0.234055, 0, 1, 0, -0.234055, 0, 0.972223, -9.72492, -2, -51.4174)
+
+[node name="BrushRock_1715802582_912" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.668245, 0, -0.743941, 0, 1, 0, 0.743941, 0, 0.668245, -15.715, -2, -41.9899)
+
+[node name="BrushRock_1715802583_37" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("10_8d8pl")]
+transform = Transform3D(0.981266, 0, 0.19266, 0, 1, 0, -0.19266, 0, 0.981266, -15.5691, -2, -43.6252)
+
+[node name="BrushRock_1715802586_03" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(-0.890188, 0, -0.455593, 0, 1, 0, 0.455593, 0, -0.890188, -8.14179, -2, -42.0808)
+
+[node name="BrushRock_1715802586_832" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.892882, 0, -0.450292, 0, 1, 0, 0.450292, 0, 0.892882, -4.86852, -2, -37.8055)
+
+[node name="BrushRock_1715802587_812" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("8_a5huh")]
+transform = Transform3D(0.999379, 0, -0.0352421, 0, 1, 0, 0.0352421, 0, 0.999379, -4.84653, -2, -31.5046)
+
+[node name="BrushRock_1715802589_602" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.638404, 0, 0.769701, 0, 1, 0, -0.769701, 0, 0.638404, 4.6393, -2, -31.0953)
+
+[node name="BrushRock_1715802590_465" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("8_a5huh")]
+transform = Transform3D(-0.870821, 0, 0.4916, 0, 1, 0, -0.4916, 0, -0.870821, 3.79234, -2, -36.4892)
+
+[node name="BrushRock_1715802593_201" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("18_1vkoj")]
+transform = Transform3D(0.999381, 0, -0.0351695, 0, 1, 0, 0.0351695, 0, 0.999381, 3.94636, -2, -48.3568)
+
+[node name="BrushRock_1715802602_256" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.864456, 0, 0.502708, 0, 1, 0, -0.502708, 0, 0.864456, -0.0935087, -2, -51.979)
+
+[node name="BrushRock_1715802610_254" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.931642, 0, -0.363378, 0, 1, 0, 0.363378, 0, 0.931642, 3.62148, -2, -17.0959)
+
+[node name="BrushRock_1715802611_225" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.213773, 0, 0.976883, 0, 1, 0, -0.976883, 0, 0.213773, 3.37871, -2, -20.2112)
+
+[node name="BrushRock_1715802617_206" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("21_l757x")]
+transform = Transform3D(0.208233, 0, -0.978079, 0, 1, 0, 0.978079, 0, 0.208233, -3.43645, -2, -22.3748)
+
+[node name="BrushRock_1715802620_385" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("8_a5huh")]
+transform = Transform3D(-0.80325, 0, 0.595642, 0, 1, 0, -0.595642, 0, -0.80325, -15.3033, -2, -26.1681)
+
+[node name="BrushRock_1715802621_253" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("11_bv1xe")]
+transform = Transform3D(0.999993, 0, -0.00385599, 0, 1, 0, 0.00385599, 0, 0.999993, -17.2491, -2, -19.5713)
+
+[node name="BrushRock_1715802623_406" type="Node3D" parent="City/Experiences/Nature/Low/BrushRock" instance=ExtResource("9_aim4p")]
+transform = Transform3D(0.594207, 0, 0.804312, 0, 1, 0, -0.804312, 0, 0.594207, -16.1553, -2, -35.2107)
 
 [node name="Interactive" type="Node3D" parent="City/Experiences"]
 
