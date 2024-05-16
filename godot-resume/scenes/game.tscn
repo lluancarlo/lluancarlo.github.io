@@ -3048,7 +3048,7 @@ transform = Transform3D(0.0833583, 0, -0.797332, 0, 0.801678, 0, 0.797332, 0, 0.
 transform = Transform3D(0.259798, 0, 0.811441, 0, 0.852016, 0, -0.811441, 0, 0.259798, -32.8469, -2, -25.3208)
 
 [node name="BrushTree_1715802504_255" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("7_i8vau")]
-transform = Transform3D(-0.687993, 0, 0.819919, 0, 1.07033, 0, -0.819919, 0, -0.687993, -30.1853, -2, -30.631)
+transform = Transform3D(-0.687993, 0, 0.819919, 0, 1.07033, 0, -0.819919, 0, -0.687993, -31.3691, -2, -30.8422)
 
 [node name="BrushTree_1715802508_17" parent="City/Experiences/Nature/Low/BrushTree" instance=ExtResource("10_rcj88")]
 transform = Transform3D(-1.07679, 0, -0.262486, 0, 1.10832, 0, 0.262486, 0, -1.07679, -30.9244, -2, -34.1102)
