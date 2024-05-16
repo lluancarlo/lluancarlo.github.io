@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=165 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -72,6 +72,8 @@
 [ext_resource type="AudioStream" uid="uid://doe003r0lcxqg" path="res://audio/impact_3.wav" id="56_au57e"]
 [ext_resource type="FontFile" uid="uid://cchm3svytgem3" path="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf" id="59_v77ee"]
 [ext_resource type="Script" path="res://scripts/AreaOverlay.gd" id="59_y1uea"]
+[ext_resource type="AudioStream" uid="uid://c83ihvaulblyw" path="res://assets/kenney/interface-sounds/select_005.ogg" id="73_hfuq1"]
+[ext_resource type="AudioStream" uid="uid://dc6f5ovhc0bpy" path="res://assets/kenney/interface-sounds/drop_004.ogg" id="74_vq0br"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ev86x"]
 material = ExtResource("1_bdqam")
@@ -3333,14 +3335,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 
 [node name="AudioEngine" type="AudioStreamPlayer3D" parent="Player"]
 stream = ExtResource("53_8swy2")
+volume_db = -7.0
 pitch_scale = 0.2
 autoplay = true
 
 [node name="AudioImpact" type="AudioStreamPlayer3D" parent="Player"]
 stream = SubResource("AudioStreamRandomizer_rsaax")
-volume_db = -5.0
+volume_db = -7.0
 
-[node name="UiManager" type="Control" parent="." node_paths=PackedStringArray("player", "debug_panel", "hud_area_overlay", "warning_dialog", "where_born_dialog", "where_living_dialog", "university_dialog", "exp_consinco_dialog", "exp_magit_dialog", "exp_topgaming_dialog", "exp_deltaengine_dialog")]
+[node name="UiManager" type="Control" parent="." node_paths=PackedStringArray("_player", "_debug_panel", "_hud_area_overlay", "_audio_open", "_audio_close", "_popups_control", "_warning_dialog", "_where_born_dialog", "_where_living_dialog", "_university_dialog", "_exp_consinco_dialog", "_exp_magit_dialog", "_exp_topgaming_dialog", "_exp_deltaengine_dialog")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -3351,17 +3354,20 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 mouse_filter = 2
 script = ExtResource("46_nk40p")
-player = NodePath("../Player")
-debug_panel = NodePath("Debugs")
-hud_area_overlay = NodePath("HUD/AreaOverlay")
-warning_dialog = NodePath("Popups/WarningPopup")
-where_born_dialog = NodePath("Popups/WhereBorn")
-where_living_dialog = NodePath("Popups/WhereLiving")
-university_dialog = NodePath("Popups/University")
-exp_consinco_dialog = NodePath("Popups/ExpConsinco")
-exp_magit_dialog = NodePath("Popups/ExpMagit")
-exp_topgaming_dialog = NodePath("Popups/ExpTopGaming")
-exp_deltaengine_dialog = NodePath("Popups/ExpDeltaEngine")
+_player = NodePath("../Player")
+_debug_panel = NodePath("Debugs")
+_hud_area_overlay = NodePath("HUD/AreaOverlay")
+_audio_open = NodePath("AudioOpen")
+_audio_close = NodePath("AudioClose")
+_popups_control = NodePath("Popups")
+_warning_dialog = NodePath("Popups/WarningPopup")
+_where_born_dialog = NodePath("Popups/WhereBorn")
+_where_living_dialog = NodePath("Popups/WhereLiving")
+_university_dialog = NodePath("Popups/University")
+_exp_consinco_dialog = NodePath("Popups/ExpConsinco")
+_exp_magit_dialog = NodePath("Popups/ExpMagit")
+_exp_topgaming_dialog = NodePath("Popups/ExpTopGaming")
+_exp_deltaengine_dialog = NodePath("Popups/ExpDeltaEngine")
 
 [node name="Popups" type="Control" parent="UiManager"]
 layout_mode = 1
@@ -3489,9 +3495,16 @@ grow_vertical = 0
 text = "Area name"
 label_settings = SubResource("LabelSettings_fojs1")
 
+[node name="AudioOpen" type="AudioStreamPlayer" parent="UiManager"]
+stream = ExtResource("73_hfuq1")
+
+[node name="AudioClose" type="AudioStreamPlayer" parent="UiManager"]
+stream = ExtResource("74_vq0br")
+
 [connection signal="body_shape_entered" from="City/Personal/Area3D" to="City/Personal" method="_on_area_3d_body_shape_entered"]
 [connection signal="body_shape_exited" from="City/Personal/Area3D" to="City/Personal" method="_on_area_3d_body_shape_exited"]
 [connection signal="body_shape_entered" from="City/Experiences/Area3D" to="City/Experiences" method="_on_area_3d_body_shape_entered"]
+[connection signal="closed" from="UiManager/Popups/WarningPopup" to="UiManager" method="_on_closed"]
 [connection signal="closed" from="UiManager/Popups/WarningPopup" to="UiManager" method="_on_warning_popup_close"]
 [connection signal="closed" from="UiManager/Popups/WhereBorn" to="UiManager" method="_on_closed"]
 [connection signal="closed" from="UiManager/Popups/WhereLiving" to="UiManager" method="_on_closed"]

@@ -4,6 +4,7 @@ extends Node3D
 @onready var _label_title = $LabelTitle as Label3D
 @onready var _label_interaction = $LabelInteraction as Label3D
 @onready var _animation = $AnimationPlayer as AnimationPlayer
+@onready var _audio_effect = $AudioEffect as AudioStreamPlayer
 @export var popup_id : GameData.Popups
 @export var placeholder := "Title"
 @export var interaction_color := Color(0.2, 0.2, 1)
@@ -36,6 +37,7 @@ func change_colors(color: Color) -> void:
 func _on_area_3d_body_shape_entered(_br: RID, body: Node3D, _bsi: int, _lsi: int) -> void:
 	if body is PlayerCar:
 		_animation.play("enter")
+		_audio_effect.play()
 		_label_interaction.visible = true
 		player_nearby = true
 		GameData.on_popup_id = popup_id

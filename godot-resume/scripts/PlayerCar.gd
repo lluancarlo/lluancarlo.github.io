@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	_audio_engine.pitch_scale = lerpf(_audio_engine.pitch_scale, rpm, 0.2)
 	
 	# Impact sound
-	if abs(linear_velocity.length() - previous_velocity) > 1.0:
+	if can_drive && abs(linear_velocity.length() - previous_velocity) > 1.0:
 		_audio_impact.play()
 	previous_velocity = linear_velocity.length()
 

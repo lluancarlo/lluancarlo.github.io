@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhxcynap6n88l"]
+[gd_scene load_steps=9 format=3 uid="uid://bhxcynap6n88l"]
 
 [ext_resource type="Script" path="res://scripts/PickUp.gd" id="1_ul7e6"]
 [ext_resource type="QuadMesh" uid="uid://b028udy8kuuja" path="res://assets/meshes/pick_up.tres" id="2_6msgh"]
 [ext_resource type="FontFile" uid="uid://cchm3svytgem3" path="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf" id="3_fy1a3"]
+[ext_resource type="AudioStream" uid="uid://bbjsqboqu7moh" path="res://assets/kenney/interface-sounds/switch_003.ogg" id="4_ybkj6"]
 
 [sub_resource type="Animation" id="Animation_0i5as"]
 length = 0.001
@@ -102,6 +103,9 @@ monitorable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36187, -0.00300288)
 shape = SubResource("BoxShape3D_3tpc2")
+
+[node name="AudioEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ybkj6")
 
 [connection signal="body_shape_entered" from="Area3D" to="." method="_on_area_3d_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area3D" to="." method="_on_area_3d_body_shape_exited"]
