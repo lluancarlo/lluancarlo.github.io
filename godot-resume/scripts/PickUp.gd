@@ -7,7 +7,7 @@ extends Node3D
 @onready var _audio_effect = $AudioEffect as AudioStreamPlayer
 @export var popup_id : GameData.Popups
 @export var placeholder := "Title"
-@export var interaction_color := Color(0.2, 0.2, 1)
+@export var interaction_color := Color("#00ccdc")
 
 var player_nearby : bool
 var acc : float
@@ -25,8 +25,8 @@ func _process(delta: float) -> void:
 		change_colors(interaction_color);
 	else:
 		acc += delta
-		var variation = 1 - abs(sin(acc)) / 2.0
-		change_colors(Color(variation, variation, 1));
+		var variation = 1 - abs(sin(acc)) / 1.5
+		change_colors(Color(interaction_color.r, variation, interaction_color.b));
 
 
 func change_colors(color: Color) -> void:

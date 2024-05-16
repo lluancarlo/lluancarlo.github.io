@@ -1,4 +1,4 @@
-[gd_scene load_steps=165 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=168 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -20,7 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://b8yajhb3efn4c" path="res://assets/scenes/natures/rock_small_a.scn" id="10_8d8pl"]
 [ext_resource type="PackedScene" uid="uid://2ediq532d34r" path="res://assets/scenes/natures/statue_obelisk.scn" id="10_b1hwb"]
 [ext_resource type="PackedScene" uid="uid://c51bqqlwhq2xs" path="res://assets/scenes/natures/tree_palm.scn" id="10_rcj88"]
+[ext_resource type="PackedScene" uid="uid://d20cvht8pm82s" path="res://assets/scenes/roads/construction_light.scn" id="11_13vaf"]
 [ext_resource type="PackedScene" uid="uid://b1kfaxmwnb3l8" path="res://assets/scenes/natures/rock_small_b.scn" id="11_bv1xe"]
+[ext_resource type="PackedScene" uid="uid://dnkhynr4xh24i" path="res://assets/scenes/roads/construction_pylon.scn" id="12_cov35"]
 [ext_resource type="PackedScene" uid="uid://b6k0ysrkqbmte" path="res://assets/scenes/natures/grass.scn" id="12_r0q7x"]
 [ext_resource type="PackedScene" uid="uid://bfy2kk54a7g0b" path="res://tools/brush/BrushRock.tscn" id="15_mt5tk"]
 [ext_resource type="PackedScene" uid="uid://c5l37tmlogaie" path="res://assets/scenes/buildings/house_type_19.scn" id="16_uaynw"]
@@ -60,6 +62,7 @@
 [ext_resource type="PackedScene" uid="uid://d2jsuu3kmmu33" path="res://assets/scenes/natures/tree_palm_tall.scn" id="48_bs7bt"]
 [ext_resource type="PackedScene" uid="uid://bd6hoe1geynij" path="res://scenes/dialogs/photo/where_living.tscn" id="48_ve5t5"]
 [ext_resource type="PackedScene" uid="uid://bdqq5jmdyf4i5" path="res://scenes/dialogs/photo/university.tscn" id="49_dmpl8"]
+[ext_resource type="PackedScene" uid="uid://ctr6sn6yu67gr" path="res://assets/scenes/natures/canoe.scn" id="50_5vm2s"]
 [ext_resource type="PackedScene" uid="uid://dcdlodypf3vm3" path="res://scenes/dialogs/exp/exp_consinco.tscn" id="50_fls2k"]
 [ext_resource type="ArrayMesh" uid="uid://fs6ljxxcvkaa" path="res://assets/meshes/sedan.mesh" id="51_adspf"]
 [ext_resource type="PackedScene" uid="uid://c140u5eel72t" path="res://scenes/dialogs/exp/exp_magit.tscn" id="51_sh20g"]
@@ -1195,7 +1198,7 @@ size = Vector3(30, 5, 30)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hf6ys"]
 size = Vector3(20, 6, 65)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p7kvl"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nhhaw"]
 points = PackedVector3Array(-0.769444, 0.486267, -0.286111, 0.786084, 0.602622, -0.286111, 0.786084, 0.486157, -0.286111, -0.574851, 0.525126, 1.26944, 0.608607, 0.000478412, 1.22571, -0.629866, 1.11022e-16, -1.1389, 0.453497, 1.08252, 0.544111, -0.41403, 1.05493, -0.186068, 0.608607, 0.000478367, -1.17571, -0.629866, 0, 1.1889, 0.552664, 0.525126, -1.18046, -0.574851, 0.525126, -1.18046, 0.552664, 0.525126, 1.26944, -0.444665, 1.09195, 0.553215, 0.430668, 1.05492, -0.186067, -0.769444, 0.602732, -0.286111, 0.669298, 0.213927, 1.23046, -0.613831, 0.213927, -1.21944, -0.613831, 0.213927, 1.26944, 0.630471, 0.213927, -1.21944, 0.639315, 0.00623976, 1.17578, 0.669298, 0.486157, 0.841393, 0.639315, 0.00623972, -1.12578, -0.652658, 0.213927, 1.23046, -0.463165, 1.03417, -0.19252, -0.652658, 0.213927, -1.18046, 0.669298, 0.213927, -1.18046, 0.630471, 0.213927, 1.26944, -0.592377, -1.11022e-16, 1.22653, -0.592377, 0, -1.17653, -0.769444, 0.486267, -0.441545, 0.786084, 0.486157, -0.441545)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rsaax"]
@@ -1502,11 +1505,101 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65661e-09, 0, 12)
 [node name="road_straight2" parent="City/Center/Roads" instance=ExtResource("1_2obj8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 0, 0)
 
+[node name="ConstructionLight" parent="City/Center/Roads" instance=ExtResource("11_13vaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.0637456, -11)
+
+[node name="ConstructionLight2" parent="City/Center/Roads" instance=ExtResource("11_13vaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.8, 0.0637456, -11)
+
+[node name="ConstructionLight3" parent="City/Center/Roads" instance=ExtResource("11_13vaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.8, 0.0637456, -11)
+
+[node name="ConstructionPylon" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.0637456, -10.5)
+
+[node name="ConstructionPylon4" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0.0637456, -10.5)
+
+[node name="ConstructionPylon5" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 0.0637456, -10.5)
+
+[node name="ConstructionPylon7" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.5, 0.0637456, -10.5)
+
+[node name="ConstructionPylon2" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.5, 0.0637456, -10.5)
+
+[node name="ConstructionPylon3" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0.0637456, -10.5)
+
+[node name="ConstructionPylon6" parent="City/Center/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, 0.0637456, -10.5)
+
 [node name="Nature" type="Node3D" parent="City/Center"]
 
 [node name="Props" type="Node3D" parent="City/Center/Nature"]
 
 [node name="statue_obelisk" parent="City/Center/Nature/Props" instance=ExtResource("10_b1hwb")]
+
+[node name="fence_planks_double" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 7.49545)
+
+[node name="fence_planks_double2" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 10.4955)
+
+[node name="fence_planks_double3" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 13.4955)
+
+[node name="fence_planks_double4" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 16.4955)
+
+[node name="fence_planks_double5" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 19.4955)
+
+[node name="fence_planks_double6" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 22.4955)
+
+[node name="fence_planks_double7" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 25.4955)
+
+[node name="fence_planks_double8" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 28.4955)
+
+[node name="fence_planks_double9" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 31.4955)
+
+[node name="fence_planks_double10" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -13.9832, 0, 34.4955)
+
+[node name="fence_planks_double11" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 34.0168, 0, -14.5045)
+
+[node name="fence_planks_double12" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 31.0168, 0, -14.5045)
+
+[node name="fence_planks_double13" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 28.0168, 0, -14.5045)
+
+[node name="fence_planks_double14" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 25.0168, 0, -14.5045)
+
+[node name="fence_planks_double15" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 22.0168, 0, -14.5045)
+
+[node name="fence_planks_double16" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 19.0168, 0, -14.5045)
+
+[node name="fence_planks_double17" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 16.0168, 0, -14.5045)
+
+[node name="fence_planks_double18" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 13.0168, 0, -14.5045)
+
+[node name="fence_planks_double19" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 10.0168, 0, -14.5045)
+
+[node name="fence_planks_double20" parent="City/Center/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 7.01685, 0, -14.5045)
 
 [node name="Low" type="Node3D" parent="City/Center/Nature"]
 
@@ -1761,52 +1854,70 @@ skeleton = NodePath("")
 [node name="Props" type="Node3D" parent="City/Personal/Nature"]
 
 [node name="fence_planks_double" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 8)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 7.90943)
 
 [node name="fence_planks_double2" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 12)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 10.9094)
 
 [node name="fence_planks_double3" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 16)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 13.9094)
 
 [node name="fence_planks_double4" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 20)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 16.9094)
+
+[node name="fence_planks_double9" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25, 0, 19.9094)
 
 [node name="fence_planks_double10" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 12.3, 0, 2.7)
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 12.3, 0, 2.76038)
 
 [node name="fence_planks_double11" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 16.3, 0, 2.7)
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 15.3, 0, 2.76038)
 
 [node name="fence_planks_double12" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 20.3, 0, 2.7)
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 18.3, 0, 2.76038)
+
+[node name="fence_planks_double18" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 21.3, 0, 2.76038)
 
 [node name="fence_planks_double5" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 19.525, 0, 24.9953)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 21.52, 0, 25.3)
 
 [node name="fence_planks_double6" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 15.525, 0, 24.9953)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 18.52, 0, 25.3)
 
 [node name="fence_planks_double7" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11.525, 0, 24.9953)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 15.52, 0, 25.3)
 
 [node name="fence_planks_double8" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.525, 0, 24.9953)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12.52, 0, 25.3)
+
+[node name="fence_planks_double19" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.51999, 0, 25.3)
+
+[node name="fence_planks_double20" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.51999, 0, 25.3)
 
 [node name="fence_planks_double13" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 13.0109)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 12.4895)
 
 [node name="fence_planks_double14" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 17.0109)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 15.4895)
 
 [node name="fence_planks_double15" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 21.0109)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 18.4895)
+
+[node name="fence_planks_double21" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 2.64192, 0, 21.4895)
 
 [node name="fence_planks_double16" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 5.38805, -4.76837e-07, 9.72937)
+transform = Transform3D(0.946638, 0, 0.322299, 0, 1, 0, -0.322299, 0, 0.946638, 4.8568, -4.76837e-07, 9.73184)
 
 [node name="fence_planks_double17" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 9.10202, 0, 6.22152)
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 9.85574, 0, 4.91603)
+
+[node name="fence_planks_double22" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(0.707107, 0, 0.707106, 0, 1, 0, -0.707106, 0, 0.707107, 7.82197, 0, 7.74122)
 
 [node name="Low" type="Node3D" parent="City/Personal/Nature"]
 
@@ -2726,6 +2837,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -18)
 [node name="tile_low4" parent="City/Experiences/Roads" instance=ExtResource("3_tfq4s")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 8.015, -21.8, -2, -24)
 
+[node name="ConstructionLight" parent="City/Experiences/Roads" instance=ExtResource("11_13vaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.988, -1.95031, -42.0764)
+
+[node name="ConstructionLight2" parent="City/Experiences/Roads" instance=ExtResource("11_13vaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.188, -1.95031, -42.0764)
+
+[node name="ConstructionLight3" parent="City/Experiences/Roads" instance=ExtResource("11_13vaf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.788, -1.95031, -42.0764)
+
+[node name="ConstructionPylon" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.988, -1.95031, -41.5764)
+
+[node name="ConstructionPylon4" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.488, -1.95031, -41.5764)
+
+[node name="ConstructionPylon5" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.988, -1.95031, -41.5764)
+
+[node name="ConstructionPylon7" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.488, -1.95031, -41.5764)
+
+[node name="ConstructionPylon2" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.488, -1.95031, -41.5764)
+
+[node name="ConstructionPylon3" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.988, -1.95031, -41.5764)
+
+[node name="ConstructionPylon6" parent="City/Experiences/Roads" instance=ExtResource("12_cov35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.488, -1.95031, -41.5764)
+
 [node name="Buildings" type="Node3D" parent="City/Experiences"]
 
 [node name="large_building_a" parent="City/Experiences/Buildings" instance=ExtResource("36_atnv1")]
@@ -2745,123 +2886,159 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, -
 [node name="Props" type="Node3D" parent="City/Experiences/Nature"]
 
 [node name="fence_planks_double13" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, 3.796)
-
-[node name="fence_planks_double48" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -31.9136, -2, 5.796)
-
-[node name="fence_planks_double49" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -27.9136, -2, 5.796)
-
-[node name="fence_planks_double50" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -23.9136, -2, 5.796)
-
-[node name="fence_planks_double51" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -19.9136, -2, 5.796)
-
-[node name="fence_planks_double52" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -15.9136, -2, 5.796)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, 4.4016)
 
 [node name="fence_planks_double14" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -0.204002)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, 1.4016)
 
 [node name="fence_planks_double15" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -4.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -1.5984)
 
 [node name="fence_planks_double16" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -8.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -4.5984)
 
 [node name="fence_planks_double17" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -12.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -7.5984)
 
 [node name="fence_planks_double18" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -16.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -10.5984)
 
 [node name="fence_planks_double19" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -20.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -13.5984)
 
 [node name="fence_planks_double20" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -24.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -16.5984)
 
 [node name="fence_planks_double21" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -28.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -19.5984)
 
 [node name="fence_planks_double22" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -32.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -22.5984)
 
 [node name="fence_planks_double23" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -35.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -25.5984)
 
 [node name="fence_planks_double24" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -39.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -28.5984)
 
 [node name="fence_planks_double25" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -43.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -31.5984)
 
 [node name="fence_planks_double26" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -47.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -34.5984)
 
 [node name="fence_planks_double27" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9136, -2, -51.204)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -37.5984)
+
+[node name="fence_planks_double54" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -40.5984)
+
+[node name="fence_planks_double55" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -43.5984)
+
+[node name="fence_planks_double56" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -46.5984)
+
+[node name="fence_planks_double57" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -49.0984)
+
+[node name="fence_planks_double58" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -33.9807, -2, -52.0984)
+
+[node name="fence_planks_double48" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -32.4832, -2, 5.99545)
+
+[node name="fence_planks_double49" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -29.4832, -2, 5.99545)
+
+[node name="fence_planks_double50" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -26.4832, -2, 5.99545)
+
+[node name="fence_planks_double51" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -20.4832, -2, 5.99545)
+
+[node name="fence_planks_double53" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -17.4832, -2, 5.99545)
+
+[node name="fence_planks_double52" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, -23.4832, -2, 5.99545)
 
 [node name="fence_planks_double28" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -32.0114, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -32.1792, -2, -53.9935)
 
 [node name="fence_planks_double29" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -28.0114, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -29.1792, -2, -53.9935)
 
 [node name="fence_planks_double30" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -24.0114, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -26.1792, -2, -53.9935)
 
 [node name="fence_planks_double31" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -20.0114, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -23.1792, -2, -53.9935)
 
 [node name="fence_planks_double32" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -16.0114, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -20.1792, -2, -53.9935)
 
 [node name="fence_planks_double33" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -12.0114, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -17.1792, -2, -53.9935)
 
 [node name="fence_planks_double34" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -8.01139, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -14.1792, -2, -53.9935)
 
 [node name="fence_planks_double35" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -4.01139, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -11.1792, -2, -53.9935)
 
 [node name="fence_planks_double36" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -0.0113945, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -8.17918, -2, -53.9935)
 
 [node name="fence_planks_double37" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 3.98861, -2, -53.8939)
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -5.17918, -2, -53.9935)
+
+[node name="fence_planks_double59" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, -2.17918, -2, -53.9935)
+
+[node name="fence_planks_double60" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 0.820824, -2, -53.9935)
+
+[node name="fence_planks_double61" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 3.82082, -2, -53.9935)
 
 [node name="fence_planks_double38" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -51.8939)
 
 [node name="fence_planks_double39" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -47.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -48.8939)
 
 [node name="fence_planks_double40" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -43.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -45.8939)
 
 [node name="fence_planks_double41" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -39.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -42.8939)
 
 [node name="fence_planks_double42" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -35.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -39.8939)
 
 [node name="fence_planks_double43" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -31.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -36.8939)
 
 [node name="fence_planks_double44" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -27.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -33.8939)
 
 [node name="fence_planks_double45" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -23.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -30.8939)
 
 [node name="fence_planks_double46" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
-transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -19.8939)
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -27.8939)
 
 [node name="fence_planks_double47" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -24.8939)
+
+[node name="fence_planks_double62" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.98861, -2, -21.8939)
+
+[node name="fence_planks_double63" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
+transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -18.8939)
+
+[node name="fence_planks_double64" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -15.8939)
 
 [node name="Low" type="Node3D" parent="City/Experiences/Nature"]
@@ -3260,6 +3437,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -23)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="City/Experiences/Area3D"]
 shape = SubResource("BoxShape3D_hf6ys")
 
+[node name="Canoe" parent="City" instance=ExtResource("50_5vm2s")]
+transform = Transform3D(0.921626, 0, -0.388079, 0, 1, 0, 0.388079, 0, 0.921626, 10.1719, -2.27646, -21.5282)
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, 10, 5, -2)
 script = ExtResource("1_gptlb")
@@ -3268,66 +3448,66 @@ offset_position = Vector3(-2, 4, -2)
 offset_rotation = Vector3(-45, -135, 0)
 
 [node name="Player" type="VehicleBody3D" parent="."]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -27.151, -1, -23.428)
+transform = Transform3D(-4.37113e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37113e-08, -0.0781343, 0.209514, -7.89239)
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0.2, 0)
 can_sleep = false
 script = ExtResource("2_hp3v1")
 
 [node name="Body" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.2, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.2, 0)
 mesh = ExtResource("51_adspf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.2, 0)
-shape = SubResource("ConvexPolygonShape3D_p7kvl")
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.2, 0)
+shape = SubResource("ConvexPolygonShape3D_nhhaw")
 
 [node name="WheelFL" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.600002, 0.25, 0.658592)
+transform = Transform3D(0.999999, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 0.999999, 0.5, 0.25, 0.53)
 use_as_steering = true
 wheel_roll_influence = 0.5
-wheel_radius = 0.4
+wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFL"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 0)
+transform = Transform3D(0.8, 0, -3.55271e-15, 0, 0.8, 0, 3.55271e-15, 0, 0.8, -0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="WheelFR" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.25, 0.658592)
+transform = Transform3D(0.999999, 0, -1.77636e-14, 0, 1, 0, 1.77636e-14, 0, 0.999999, -0.5, 0.25, 0.53)
 use_as_steering = true
 wheel_roll_influence = 0.5
-wheel_radius = 0.4
+wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFR"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.25, 0, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="WheelRL" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.600002, 0.25, -0.675987)
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0.5, 0.25, -0.53)
 use_as_traction = true
 wheel_roll_influence = 0.5
-wheel_radius = 0.4
+wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRL"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="WheelRR" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.25, -0.675987)
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.25, -0.53)
 use_as_traction = true
 wheel_roll_influence = 0.5
-wheel_radius = 0.4
+wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRR"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.25, 0, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="CenterOfMass" type="Node3D" parent="Player"]
