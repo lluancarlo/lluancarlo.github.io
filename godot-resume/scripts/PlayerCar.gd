@@ -20,7 +20,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Engine sound
 	var rpm = ((abs(current_rpm) / 100) + 1) / 5
-	_audio_engine.pitch_scale = lerpf(_audio_engine.pitch_scale, rpm, 0.2)
+	var gear = rpm / 0.2
+	var new_pitch = lerp(0.2 if int(gear) == 1 else 0.45, 0.7, gear - int(gear))
+	_audio_engine.pitch_scale = lerpf(_audio_engine.pitch_scale, new_pitch, 0.2)
 	
 	# Impact sound
 	if can_drive && abs(linear_velocity.length() - previous_velocity) > 1.0:

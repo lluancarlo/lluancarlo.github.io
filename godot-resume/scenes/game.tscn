@@ -3504,6 +3504,7 @@ stream = ExtResource("74_vq0br")
 [connection signal="body_shape_entered" from="City/Personal/Area3D" to="City/Personal" method="_on_area_3d_body_shape_entered"]
 [connection signal="body_shape_exited" from="City/Personal/Area3D" to="City/Personal" method="_on_area_3d_body_shape_exited"]
 [connection signal="body_shape_entered" from="City/Experiences/Area3D" to="City/Experiences" method="_on_area_3d_body_shape_entered"]
+[connection signal="body_shape_exited" from="City/Experiences/Area3D" to="City/Experiences" method="_on_area_3d_body_shape_exited"]
 [connection signal="closed" from="UiManager/Popups/WarningPopup" to="UiManager" method="_on_closed"]
 [connection signal="closed" from="UiManager/Popups/WarningPopup" to="UiManager" method="_on_warning_popup_close"]
 [connection signal="closed" from="UiManager/Popups/WhereBorn" to="UiManager" method="_on_closed"]
