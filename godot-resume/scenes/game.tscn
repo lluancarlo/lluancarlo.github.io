@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=172 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -77,6 +77,7 @@
 [ext_resource type="AudioStream" uid="uid://c83ihvaulblyw" path="res://assets/kenney/interface-sounds/select_005.ogg" id="73_hfuq1"]
 [ext_resource type="AudioStream" uid="uid://dc6f5ovhc0bpy" path="res://assets/kenney/interface-sounds/drop_004.ogg" id="74_vq0br"]
 [ext_resource type="FontFile" uid="uid://b53g3g4l0rhtn" path="res://assets/Montreal-Bold.ttf" id="75_q7g5h"]
+[ext_resource type="PackedScene" uid="uid://dmyhkht6egj43" path="res://assets/scenes/natures/sign.scn" id="78_o0w3k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h7h3w"]
 sky_top_color = Color(0.504927, 0.569293, 0.726509, 1)
@@ -1939,6 +1940,10 @@ transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 9.85574, 0
 [node name="fence_planks_double22" parent="City/Personal/Nature/Props" instance=ExtResource("22_ccbhg")]
 transform = Transform3D(0.707107, 0, 0.707106, 0, 1, 0, -0.707106, 0, 0.707107, 7.82197, 0, 7.74122)
 
+[node name="Sign" parent="City/Personal/Nature/Props" instance=ExtResource("78_o0w3k")]
+transform = Transform3D(0.846249, 0, 0.532788, 0, 1, 0, -0.532788, 0, 0.846249, 10.8089, 0.01, 2.309)
+text = "Personal"
+
 [node name="Low" type="Node3D" parent="City/Personal/Nature"]
 
 [node name="BrushGrass" type="Node3D" parent="City/Personal/Nature/Low"]
@@ -3060,6 +3065,10 @@ transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886
 
 [node name="fence_planks_double64" parent="City/Experiences/Nature/Props" instance=ExtResource("22_ccbhg")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 5.9886, -2, -15.8939)
+
+[node name="Sign" parent="City/Experiences/Nature/Props" instance=ExtResource("78_o0w3k")]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, -11, 0, -3)
+text = "Experiences"
 
 [node name="Low" type="Node3D" parent="City/Experiences/Nature"]
 
