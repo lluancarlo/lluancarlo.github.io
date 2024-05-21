@@ -26,9 +26,11 @@ func _ready():
 	set_all_popups_invisible()
 	_warning_dialog.visible = true
 
+
 func set_all_popups_invisible() -> void:
 	for popup in _popups_control.get_children():
 		popup.visible = false
+
 
 func open_popup(id: int) -> void:
 	match(id):
@@ -49,6 +51,7 @@ func open_popup(id: int) -> void:
 	opened_popup.open()
 	_audio_open.play()
 
+
 func _on_interactive_pressed() -> void:
 	if opened_popup != null:
 		opened_popup.close()
@@ -57,13 +60,12 @@ func _on_interactive_pressed() -> void:
 		open_popup(GameData.on_popup_id)
 		_player.can_drive = false
 
-func _on_warning_popup_close() -> void:
-	_debug_panel.visible = true
 
 func _on_closed() -> void:
 	_audio_close.play()
 	opened_popup = null
 	_player.can_drive = true
+
 
 func show_area_overlay(area_name: String) -> void:
 	_hud_area_overlay.show_new_area(area_name)

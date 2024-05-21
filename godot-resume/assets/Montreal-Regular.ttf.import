@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cchm3svytgem3"
-path="res://.godot/imported/kenney_future_narrow.ttf-001edda8848e6d4915bd2d9dbbba95a9.fontdata"
+uid="uid://gqqdohjg3y7j"
+path="res://.godot/imported/Montreal-Regular.ttf-353f0dedab30b61b9c64d0fc91b0fac9.fontdata"
 
 [deps]
 
-source_file="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf"
-dest_files=["res://.godot/imported/kenney_future_narrow.ttf-001edda8848e6d4915bd2d9dbbba95a9.fontdata"]
+source_file="res://assets/Montreal-Regular.ttf"
+dest_files=["res://.godot/imported/Montreal-Regular.ttf-353f0dedab30b61b9c64d0fc91b0fac9.fontdata"]
 
 [params]
 

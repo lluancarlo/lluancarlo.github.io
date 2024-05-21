@@ -1,9 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b0h037oplcutf"]
 
-[ext_resource type="FontFile" uid="uid://cchm3svytgem3" path="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf" id="1_3b15y"]
+[ext_resource type="FontFile" uid="uid://gqqdohjg3y7j" path="res://assets/Montreal-Regular.ttf" id="1_1g0xv"]
 
 [resource]
-font = ExtResource("1_3b15y")
+font = ExtResource("1_1g0xv")
 font_size = 32
 font_color = Color(0, 0.8, 0.862745, 1)
 outline_size = 3

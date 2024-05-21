@@ -1,9 +1,9 @@
-[gd_scene load_steps=168 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=171 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
 [ext_resource type="PackedScene" uid="uid://bvd2ymb6hilfe" path="res://assets/scenes/roads/road_curve.scn" id="1_bp8cq"]
-[ext_resource type="Script" path="res://scripts/FollowPlayer.gd" id="1_gptlb"]
+[ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_gptlb"]
 [ext_resource type="ArrayOccluder3D" uid="uid://dri4wbusws3m7" path="res://scenes/game.occ" id="1_xjmf5"]
 [ext_resource type="Script" path="res://scripts/PlayerCar.gd" id="2_hp3v1"]
 [ext_resource type="PackedScene" uid="uid://cwk2lgxoq5sg2" path="res://assets/scenes/natures/cliff_half_rock.scn" id="2_n6s6i"]
@@ -73,14 +73,33 @@
 [ext_resource type="AudioStream" uid="uid://djduywofbk318" path="res://audio/impact_1.wav" id="54_8eyxk"]
 [ext_resource type="AudioStream" uid="uid://ldcb7fuyl425" path="res://audio/impact_2.wav" id="55_emjfu"]
 [ext_resource type="AudioStream" uid="uid://doe003r0lcxqg" path="res://audio/impact_3.wav" id="56_au57e"]
-[ext_resource type="FontFile" uid="uid://cchm3svytgem3" path="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf" id="59_v77ee"]
 [ext_resource type="Script" path="res://scripts/AreaOverlay.gd" id="59_y1uea"]
 [ext_resource type="AudioStream" uid="uid://c83ihvaulblyw" path="res://assets/kenney/interface-sounds/select_005.ogg" id="73_hfuq1"]
 [ext_resource type="AudioStream" uid="uid://dc6f5ovhc0bpy" path="res://assets/kenney/interface-sounds/drop_004.ogg" id="74_vq0br"]
+[ext_resource type="FontFile" uid="uid://b53g3g4l0rhtn" path="res://assets/Montreal-Bold.ttf" id="75_q7g5h"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h7h3w"]
+sky_top_color = Color(0.504927, 0.569293, 0.726509, 1)
+sky_horizon_color = Color(0.593483, 0.725398, 0.801377, 1)
+sky_curve = 0.3
+ground_bottom_color = Color(0.298039, 0.698039, 0.972549, 1)
+ground_horizon_color = Color(0.592157, 0.72549, 0.8, 1)
+ground_curve = 0.07
+sun_angle_max = 45.0
+
+[sub_resource type="Sky" id="Sky_els7s"]
+sky_material = SubResource("ProceduralSkyMaterial_h7h3w")
+process_mode = 3
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_hyb1t"]
+background_mode = 2
+sky = SubResource("Sky_els7s")
+fog_density = 0.1
 
 [sub_resource type="BoxMesh" id="BoxMesh_ev86x"]
 material = ExtResource("1_bdqam")
-size = Vector3(50, 0.1, 50)
+size = Vector3(60, 0.1, 60)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_43wc4"]
 data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
@@ -1218,7 +1237,7 @@ font_color = Color(1, 1, 0, 1)
 font_size = 26
 
 [sub_resource type="LabelSettings" id="LabelSettings_fojs1"]
-font = ExtResource("59_v77ee")
+font = ExtResource("75_q7g5h")
 font_size = 64
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
@@ -1229,18 +1248,19 @@ occluder = ExtResource("1_xjmf5")
 [node name="World" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_hyb1t")
 
 [node name="Sun" type="DirectionalLight3D" parent="World"]
 transform = Transform3D(0.707107, -0.5, -0.5, 0, -0.707107, 0.707107, -0.707107, -0.5, -0.5, 0, 0, 0)
+light_color = Color(0.498039, 0.498039, 0.498039, 1)
 light_energy = 2.0
 shadow_enabled = true
 shadow_bias = 2.0
 shadow_opacity = 0.9
-directional_shadow_blend_splits = true
 directional_shadow_max_distance = 30.0
 
 [node name="Water" type="MeshInstance3D" parent="World"]
-transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 2, 0.255722, -2.2, -8.65734)
+transform = Transform3D(1.7, 0, 0, 0, 1.5, 0, 0, 0, 2, -8.5, -2.2, -18.669)
 mesh = SubResource("BoxMesh_ev86x")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_wx30m")
@@ -1446,7 +1466,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.5, 0, -1, 0, -4.37114e-08, 34.5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("6_jcptq")
-volume_db = 5.0
+volume_db = -7.0
 autoplay = true
 
 [node name="City" type="Node3D" parent="."]
@@ -3440,17 +3460,22 @@ shape = SubResource("BoxShape3D_hf6ys")
 [node name="Canoe" parent="City" instance=ExtResource("50_5vm2s")]
 transform = Transform3D(0.921626, 0, -0.388079, 0, 1, 0, 0.388079, 0, 0.921626, 10.1719, -2.27646, -21.5282)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, 10, 5, -2)
-script = ExtResource("1_gptlb")
-_player_node = NodePath("../Player")
-offset_position = Vector3(-2, 4, -2)
-offset_rotation = Vector3(-45, -135, 0)
+[node name="Canoe2" parent="City" instance=ExtResource("50_5vm2s")]
+transform = Transform3D(-0.61339, 0, -0.78978, 0, 1, 0, 0.78978, 0, -0.61339, -6.3281, -2.27646, -58.5282)
+
+[node name="Canoe3" parent="City" instance=ExtResource("50_5vm2s")]
+transform = Transform3D(0.604112, 0, -0.796899, 0, 1, 0, 0.796899, 0, 0.604112, -22.8281, -2.27646, -58.0282)
+
+[node name="Canoe4" parent="City" instance=ExtResource("50_5vm2s")]
+transform = Transform3D(-0.796899, 0, -0.604112, 0, 1, 0, 0.604112, 0, -0.796899, -38.8281, -2.27646, -42.0282)
+
+[node name="Canoe5" parent="City" instance=ExtResource("50_5vm2s")]
+transform = Transform3D(0.604112, 0, -0.796899, 0, 1, 0, 0.796899, 0, 0.604112, -38.8281, -2.27646, -18.5282)
 
 [node name="Player" type="VehicleBody3D" parent="."]
 transform = Transform3D(-4.37113e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37113e-08, -0.0781343, 0.209514, -7.89239)
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, 0.2, 0)
+center_of_mass = Vector3(0, 0.15, 0)
 can_sleep = false
 script = ExtResource("2_hp3v1")
 
@@ -3459,7 +3484,7 @@ transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 
 mesh = ExtResource("51_adspf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.2, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.31326, 0)
 shape = SubResource("ConvexPolygonShape3D_nhhaw")
 
 [node name="WheelFL" type="VehicleWheel3D" parent="Player"]
@@ -3469,6 +3494,7 @@ wheel_roll_influence = 0.5
 wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
+damping_compression = 1.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFL"]
 transform = Transform3D(0.8, 0, -3.55271e-15, 0, 0.8, 0, 3.55271e-15, 0, 0.8, -0.15, 0, 0)
@@ -3481,6 +3507,7 @@ wheel_roll_influence = 0.5
 wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
+damping_compression = 1.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFR"]
 transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0.15, 0, 0)
@@ -3493,6 +3520,7 @@ wheel_roll_influence = 0.5
 wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
+damping_compression = 1.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRL"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.15, 0, 0)
@@ -3505,23 +3533,29 @@ wheel_roll_influence = 0.5
 wheel_radius = 0.3
 suspension_stiffness = 20.0
 suspension_max_force = 160.0
+damping_compression = 1.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRR"]
 transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
-[node name="CenterOfMass" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
-
 [node name="AudioEngine" type="AudioStreamPlayer3D" parent="Player"]
 stream = ExtResource("53_8swy2")
-volume_db = -7.0
+volume_db = -15.0
 pitch_scale = 0.2
 autoplay = true
 
 [node name="AudioImpact" type="AudioStreamPlayer3D" parent="Player"]
 stream = SubResource("AudioStreamRandomizer_rsaax")
-volume_db = -7.0
+volume_db = -15.0
+
+[node name="CameraBase" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/CameraBase"]
+transform = Transform3D(-1, 0, -8.74229e-08, 0, 1, 0, 8.74229e-08, 0, -1, 0, 1, -5)
+script = ExtResource("1_gptlb")
+min_distance = 2.0
 
 [node name="UiManager" type="Control" parent="." node_paths=PackedStringArray("_player", "_debug_panel", "_hud_area_overlay", "_audio_open", "_audio_close", "_popups_control", "_warning_dialog", "_where_born_dialog", "_where_living_dialog", "_university_dialog", "_exp_consinco_dialog", "_exp_magit_dialog", "_exp_topgaming_dialog", "_exp_deltaengine_dialog")]
 layout_mode = 3
@@ -3589,7 +3623,6 @@ offset_bottom = 298.5
 layout_mode = 1
 
 [node name="Debugs" type="Control" parent="UiManager"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3617,6 +3650,7 @@ text = "96"
 label_settings = SubResource("LabelSettings_phbwc")
 
 [node name="DebugPerformance" parent="UiManager/Debugs" instance=ExtResource("37_j6ptu")]
+visible = false
 layout_mode = 0
 offset_left = 20.0
 offset_top = 60.0
@@ -3624,6 +3658,7 @@ offset_right = 270.0
 offset_bottom = 260.0
 
 [node name="DebugVehicleBody3D" parent="UiManager/Debugs" instance=ExtResource("32_bvi33")]
+visible = false
 layout_mode = 1
 offset_left = -370.0
 offset_right = -20.0
@@ -3632,6 +3667,7 @@ node_vehiclebody3D = NodePath("../../../Player")
 show_node_name = true
 
 [node name="DebugVehicleWheel3D" parent="UiManager/Debugs" instance=ExtResource("33_htkxi")]
+visible = false
 layout_mode = 1
 offset_left = -370.0
 offset_top = 500.0
@@ -3686,7 +3722,6 @@ stream = ExtResource("74_vq0br")
 [connection signal="body_shape_entered" from="City/Experiences/Area3D" to="City/Experiences" method="_on_area_3d_body_shape_entered"]
 [connection signal="body_shape_exited" from="City/Experiences/Area3D" to="City/Experiences" method="_on_area_3d_body_shape_exited"]
 [connection signal="closed" from="UiManager/Popups/WarningPopup" to="UiManager" method="_on_closed"]
-[connection signal="closed" from="UiManager/Popups/WarningPopup" to="UiManager" method="_on_warning_popup_close"]
 [connection signal="closed" from="UiManager/Popups/WhereBorn" to="UiManager" method="_on_closed"]
 [connection signal="closed" from="UiManager/Popups/WhereLiving" to="UiManager" method="_on_closed"]
 [connection signal="closed" from="UiManager/Popups/University" to="UiManager" method="_on_closed"]

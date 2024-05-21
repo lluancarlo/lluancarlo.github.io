@@ -5,8 +5,8 @@
 [ext_resource type="LabelSettings" uid="uid://cx543th5c70vg" path="res://assets/styles/dialog_title_label.res" id="3_ase56"]
 [ext_resource type="Texture2D" uid="uid://bpkubgvvqftqw" path="res://assets/kenney/ui-pack/PNG/grey_crossWhite.png" id="4_2ikll"]
 [ext_resource type="Texture2D" uid="uid://dohmkqjl8x4yn" path="res://assets/kenney/ui-pack/PNG/grey_crossGrey.png" id="5_l80im"]
-[ext_resource type="FontFile" uid="uid://cchm3svytgem3" path="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf" id="7_6db6n"]
 [ext_resource type="LabelSettings" uid="uid://c5m2syvcfelod" path="res://assets/styles/dialog_content_label.res" id="7_vb6ki"]
+[ext_resource type="FontFile" uid="uid://b53g3g4l0rhtn" path="res://assets/Montreal-Bold.ttf" id="7_xoygm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ld6m4"]
 bg_color = Color(0, 0.801012, 0.861656, 1)
@@ -125,9 +125,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -495.0
-offset_top = -240.0
+offset_top = -255.0
 offset_right = 495.0
-offset_bottom = 240.0
+offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_lvc0r")
@@ -179,7 +179,7 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("7_6db6n")
+theme_override_fonts/font = ExtResource("7_xoygm")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_g25ys")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7q1ma")

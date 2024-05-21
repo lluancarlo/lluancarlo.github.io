@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhxcynap6n88l"]
+[gd_scene load_steps=10 format=3 uid="uid://bhxcynap6n88l"]
 
 [ext_resource type="Script" path="res://scripts/PickUp.gd" id="1_ul7e6"]
 [ext_resource type="QuadMesh" uid="uid://b028udy8kuuja" path="res://assets/meshes/pick_up.tres" id="2_6msgh"]
-[ext_resource type="FontFile" uid="uid://cchm3svytgem3" path="res://assets/kenney/ui-pack/Font/kenney_future_narrow.ttf" id="3_fy1a3"]
+[ext_resource type="FontFile" uid="uid://gqqdohjg3y7j" path="res://assets/Montreal-Regular.ttf" id="3_gruea"]
+[ext_resource type="FontFile" uid="uid://b53g3g4l0rhtn" path="res://assets/Montreal-Bold.ttf" id="4_1os0l"]
 [ext_resource type="AudioStream" uid="uid://bbjsqboqu7moh" path="res://assets/kenney/interface-sounds/switch_003.ogg" id="4_ybkj6"]
 
 [sub_resource type="Animation" id="Animation_0i5as"]
@@ -86,7 +87,7 @@ transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107
 billboard = 1
 alpha_cut = 1
 text = "Title"
-font = ExtResource("3_fy1a3")
+font = ExtResource("3_gruea")
 outline_size = 5
 
 [node name="LabelInteraction" type="Label3D" parent="."]
@@ -94,7 +95,7 @@ transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107
 billboard = 1
 alpha_cut = 1
 text = "Press [E] to open"
-font = ExtResource("3_fy1a3")
+font = ExtResource("4_1os0l")
 outline_size = 5
 
 [node name="Area3D" type="Area3D" parent="."]
