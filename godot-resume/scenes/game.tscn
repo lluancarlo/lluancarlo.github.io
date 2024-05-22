@@ -1,4 +1,4 @@
-[gd_scene load_steps=191 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=188 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -39,14 +39,11 @@
 [ext_resource type="PackedScene" uid="uid://dmqs32owkanoe" path="res://assets/scenes/natures/crops_corn_stage_2.scn" id="25_r1aob"]
 [ext_resource type="Script" path="res://addons/scene_object_brush/Brush.gd" id="27_3qju5"]
 [ext_resource type="Material" uid="uid://b0uhbpq0epm75" path="res://assets/materials/brazil.material" id="28_1c5e0"]
-[ext_resource type="PackedScene" uid="uid://dp10q8eg5v3tp" path="res://tools/node_debug/VehicleBody3D/DebugVehicleBody3D.tscn" id="32_bvi33"]
-[ext_resource type="PackedScene" uid="uid://dnytmelmsitub" path="res://tools/node_debug/VehicleWheel3D/DebugVehicleWheel3D.tscn" id="33_htkxi"]
 [ext_resource type="PackedScene" uid="uid://6tnm3kku8qlq" path="res://assets/scenes/roads/road_slant_curve.scn" id="34_bpyjk"]
 [ext_resource type="PackedScene" uid="uid://bhxcynap6n88l" path="res://scenes/misc/pick_up.tscn" id="35_xtc3j"]
 [ext_resource type="PackedScene" uid="uid://6vida01mqfdf" path="res://assets/scenes/roads/road_side_entry.scn" id="36_0ljps"]
 [ext_resource type="PackedScene" uid="uid://b8mfabrgkotv6" path="res://assets/scenes/buildings/large_building_a.scn" id="36_atnv1"]
 [ext_resource type="PackedScene" uid="uid://df77y28vabyij" path="res://assets/scenes/roads/road_side_exit.scn" id="37_g8id2"]
-[ext_resource type="PackedScene" uid="uid://d17gs5yghghj8" path="res://tools/node_debug/Performance/DebugPerformance.tscn" id="37_j6ptu"]
 [ext_resource type="PackedScene" uid="uid://dpwm6512gxq8j" path="res://assets/scenes/buildings/large_building_d.scn" id="37_oju2f"]
 [ext_resource type="PackedScene" uid="uid://dox0d2biuxo6o" path="res://assets/scenes/roads/road_side.scn" id="38_3b5o1"]
 [ext_resource type="PackedScene" uid="uid://dnomm7cq0b3ip" path="res://assets/scenes/buildings/large_building_e.scn" id="38_kq1h4"]
@@ -3653,45 +3650,6 @@ offset_bottom = 298.5
 
 [node name="ExpDeltaEngine" parent="UiManager/Popups" instance=ExtResource("53_uymfx")]
 layout_mode = 1
-
-[node name="Debugs" type="Control" parent="UiManager"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="DebugPerformance" parent="UiManager/Debugs" instance=ExtResource("37_j6ptu")]
-visible = false
-layout_mode = 0
-offset_left = 20.0
-offset_top = 60.0
-offset_right = 270.0
-offset_bottom = 260.0
-
-[node name="DebugVehicleBody3D" parent="UiManager/Debugs" instance=ExtResource("32_bvi33")]
-visible = false
-layout_mode = 1
-offset_left = -370.0
-offset_right = -20.0
-offset_bottom = 470.0
-node_vehiclebody3D = NodePath("../../../Player")
-show_node_name = true
-
-[node name="DebugVehicleWheel3D" parent="UiManager/Debugs" instance=ExtResource("33_htkxi")]
-visible = false
-layout_mode = 1
-offset_left = -370.0
-offset_top = 500.0
-offset_right = -20.0
-offset_bottom = 920.0
-front_wheel_left = NodePath("../../../Player/WheelFL")
-front_wheel_right = NodePath("../../../Player/WheelFR")
-rear_wheel_left = NodePath("../../../Player/WheelRL")
-rear_wheel_right = NodePath("../../../Player/WheelRR")
 
 [node name="HUD" type="Control" parent="UiManager" node_paths=PackedStringArray("_fps_group", "_fps", "_gear", "_speed", "_overlay_group", "_overlay")]
 layout_mode = 1
