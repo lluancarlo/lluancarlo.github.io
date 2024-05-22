@@ -1,4 +1,4 @@
-[gd_scene load_steps=188 format=3 uid="uid://bdpgnc1txjso8"]
+[gd_scene load_steps=186 format=3 uid="uid://bdpgnc1txjso8"]
 
 [ext_resource type="PackedScene" uid="uid://bsbcd2txkjyvc" path="res://assets/scenes/roads/road_straight.scn" id="1_2obj8"]
 [ext_resource type="Material" uid="uid://d4cvloymv66vn" path="res://assets/materials/grass.material" id="1_bdqam"]
@@ -31,14 +31,12 @@
 [ext_resource type="PackedScene" uid="uid://cf23hunuvpbc0" path="res://assets/scenes/buildings/house_type_22.scn" id="18_k1kal"]
 [ext_resource type="PackedScene" uid="uid://bh3aol3c85qgk" path="res://assets/scenes/buildings/large_building_f.scn" id="19_bhiyu"]
 [ext_resource type="PackedScene" uid="uid://bmdvds3uj0jpw" path="res://assets/scenes/natures/rock_tall_b.scn" id="21_l757x"]
-[ext_resource type="Material" uid="uid://c6q8me1cqk077" path="res://assets/materials/italy.material" id="21_lysey"]
 [ext_resource type="PackedScene" uid="uid://bpkndx622xjrd" path="res://assets/scenes/natures/fence_planks_double.scn" id="22_ccbhg"]
 [ext_resource type="Script" path="res://scripts/Zone.gd" id="23_a13fj"]
 [ext_resource type="PackedScene" uid="uid://828y640r8a6v" path="res://assets/scenes/natures/crops_dirt_row.scn" id="23_lqqwb"]
 [ext_resource type="PackedScene" uid="uid://dw6rvsgisnjx0" path="res://assets/scenes/natures/crops_dirt_row_end.scn" id="24_vw2qp"]
 [ext_resource type="PackedScene" uid="uid://dmqs32owkanoe" path="res://assets/scenes/natures/crops_corn_stage_2.scn" id="25_r1aob"]
 [ext_resource type="Script" path="res://addons/scene_object_brush/Brush.gd" id="27_3qju5"]
-[ext_resource type="Material" uid="uid://b0uhbpq0epm75" path="res://assets/materials/brazil.material" id="28_1c5e0"]
 [ext_resource type="PackedScene" uid="uid://6tnm3kku8qlq" path="res://assets/scenes/roads/road_slant_curve.scn" id="34_bpyjk"]
 [ext_resource type="PackedScene" uid="uid://bhxcynap6n88l" path="res://scenes/misc/pick_up.tscn" id="35_xtc3j"]
 [ext_resource type="PackedScene" uid="uid://6vida01mqfdf" path="res://assets/scenes/roads/road_side_entry.scn" id="36_0ljps"]
@@ -92,6 +90,8 @@
 [ext_resource type="StyleBox" uid="uid://cvwkj7m12y8xd" path="res://assets/styles/slider.stylebox" id="88_ng4s7"]
 [ext_resource type="StyleBox" uid="uid://d3cv32x5hyoou" path="res://assets/styles/slider_selected_area.stylebox" id="89_cc5c1"]
 [ext_resource type="Texture2D" uid="uid://c5bhc6sbpdlfd" path="res://assets/kenney/ui-pack/PNG/blue_boxCheckmark.png" id="92_k8b10"]
+[ext_resource type="AudioStream" uid="uid://ccevkd1encrxm" path="res://assets/kenney/ui-pack/Bonus/switch2.ogg" id="92_wfqfk"]
+[ext_resource type="AudioStream" uid="uid://doyht14ygmpie" path="res://assets/kenney/ui-pack/Bonus/click1.ogg" id="93_ajrje"]
 [ext_resource type="Texture2D" uid="uid://djmjf7xotlk25" path="res://assets/kenney/ui-pack/PNG/grey_box.png" id="93_vjfiu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h7h3w"]
@@ -565,22 +565,6 @@ _bundled = {
 "variants": [SubResource("PackedScene_pvbq8"), Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.1, 0), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0), SubResource("CylinderShape3D_2ggmx")],
 "version": 3
 }
-
-[sub_resource type="QuadMesh" id="QuadMesh_s603f"]
-lightmap_size_hint = Vector2i(7, 5)
-material = ExtResource("28_1c5e0")
-flip_faces = true
-size = Vector2(1, 0.6)
-subdivide_width = 10
-subdivide_depth = 6
-
-[sub_resource type="QuadMesh" id="QuadMesh_22eor"]
-lightmap_size_hint = Vector2i(7, 5)
-material = ExtResource("21_lysey")
-flip_faces = true
-size = Vector2(1, 0.6)
-subdivide_width = 10
-subdivide_depth = 6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ix71"]
 resource_name = "dirt"
@@ -1485,7 +1469,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.5, 0, -1, 0, -4.37114e-08, 34.5
 [node name="cliff_half_rock42" parent="World/Cliffs" instance=ExtResource("2_n6s6i")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1.5, 0, -1, 0, -4.37114e-08, 34.5, 0, 12)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
+[node name="AudioAmbient" type="AudioStreamPlayer" parent="World"]
 stream = ExtResource("6_jcptq")
 volume_db = -7.0
 autoplay = true
@@ -1854,11 +1838,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 [node name="house_type19" parent="City/Personal/Buildings" instance=ExtResource("16_uaynw")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 32.5, 0, 9)
 
-[node name="Flag" type="MeshInstance3D" parent="City/Personal/Buildings/house_type19"]
-transform = Transform3D(1, 0, -1.19249e-08, 0, 1, 0, 1.19249e-08, 0, 1, 1.55138, 1.36199, 1.5898)
-mesh = SubResource("QuadMesh_s603f")
-skeleton = NodePath("")
-
 [node name="fence_wide" parent="City/Personal/Buildings" instance=ExtResource("17_fdoqk")]
 transform = Transform3D(-4.15258e-08, 0, -1, 0, 1, 0, 0.95, 0, -4.37114e-08, 34, 0, 9)
 
@@ -1867,12 +1846,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 15)
 
 [node name="house_type22" parent="City/Personal/Buildings" instance=ExtResource("18_k1kal")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 33, 0, 19)
-
-[node name="Flag" type="MeshInstance3D" parent="City/Personal/Buildings/house_type22"]
-transform = Transform3D(7.10543e-15, 0, -1, 0, 1, 0, 1, 0, 7.10543e-15, -2.39311, 2.37676, 1.39086)
-visibility_range_end = 35.0
-mesh = SubResource("QuadMesh_22eor")
-skeleton = NodePath("")
 
 [node name="tile_low" parent="City/Personal/Buildings" instance=ExtResource("3_tfq4s")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 2, 33, 0, 18)
@@ -1885,12 +1858,6 @@ transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1.5, 14, 0, 33)
 
 [node name="large_buildingF" parent="City/Personal/Buildings" instance=ExtResource("19_bhiyu")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11, 0, 33)
-
-[node name="Flag" type="MeshInstance3D" parent="City/Personal/Buildings/large_buildingF"]
-transform = Transform3D(1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, 1, -2.34293, 3.17755, 1.60656)
-visibility_range_end = 35.0
-mesh = SubResource("QuadMesh_s603f")
-skeleton = NodePath("")
 
 [node name="Nature" type="Node3D" parent="City/Personal"]
 
@@ -3758,7 +3725,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Main" type="PanelContainer" parent="UiManager/Menus" node_paths=PackedStringArray("options_menu")]
+[node name="Main" type="PanelContainer" parent="UiManager/Menus" node_paths=PackedStringArray("options_menu", "_audio_click")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -3776,6 +3743,7 @@ script = ExtResource("78_o3kw1")
 linkedin_link = "https://linkedin.com/in/luancarlosouza/"
 github_link = "https://github.com/lluancarlo/"
 options_menu = NodePath("../Options")
+_audio_click = NodePath("../../AudioClick")
 
 [node name="VBox" type="VBoxContainer" parent="UiManager/Menus/Main"]
 layout_mode = 2
@@ -3879,7 +3847,7 @@ icon = ExtResource("84_owrei")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Options" type="PanelContainer" parent="UiManager/Menus" node_paths=PackedStringArray("menu_options_graphics_low_btn", "menu_options_graphics_medium_btn", "menu_options_graphics_high_btn")]
+[node name="Options" type="PanelContainer" parent="UiManager/Menus" node_paths=PackedStringArray("_audio_switch", "_audio_click", "menu_options_graphics_low_btn", "menu_options_graphics_medium_btn", "menu_options_graphics_high_btn")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -3894,6 +3862,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("77_a34bd")
 script = ExtResource("85_4n6f3")
+_audio_switch = NodePath("../../AudioSwitch")
+_audio_click = NodePath("../../AudioClick")
 menu_options_graphics_low_btn = NodePath("VBox/Graphics/General/Low")
 menu_options_graphics_medium_btn = NodePath("VBox/Graphics/General/Medium")
 menu_options_graphics_high_btn = NodePath("VBox/Graphics/General/High")
@@ -4026,6 +3996,12 @@ stream = ExtResource("73_hfuq1")
 
 [node name="AudioClose" type="AudioStreamPlayer" parent="UiManager"]
 stream = ExtResource("74_vq0br")
+
+[node name="AudioSwitch" type="AudioStreamPlayer" parent="UiManager"]
+stream = ExtResource("92_wfqfk")
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="UiManager"]
+stream = ExtResource("93_ajrje")
 
 [connection signal="body_shape_entered" from="City/Personal/Area3D" to="City/Personal" method="_on_area_3d_body_shape_entered"]
 [connection signal="body_shape_exited" from="City/Personal/Area3D" to="City/Personal" method="_on_area_3d_body_shape_exited"]

@@ -5,6 +5,9 @@ class_name MenuOption
 signal show_fps(show: bool)
 signal close_pressed()
 enum Config { LOW, MEDIUM, HIGH }
+@export_category(&"Audio")
+@export var _audio_switch : AudioStreamPlayer
+@export var _audio_click : AudioStreamPlayer
 @export_category(&"Game Configs")
 @export_subgroup(&"Low")
 @export var low_vibilitity_range = 25
@@ -34,6 +37,7 @@ func _physics_process(_d: float) -> void:
 
 
 func on_graphics_selected(selected: bool, config: Config) -> void:
+	_audio_switch.play()
 	if (not menu_options_graphics_low_btn.button_pressed and 
 		not menu_options_graphics_medium_btn.button_pressed and
 		not menu_options_graphics_high_btn.button_pressed):
@@ -116,8 +120,10 @@ func get_shadow_distance(config: Config) -> int:
 
 
 func _on_fps_toggle_pressed(toggled_on: bool) -> void:
+	_audio_switch.play()
 	show_fps.emit(toggled_on)
 
 
 func _on_close_pressed() -> void:
+	_audio_click.play()
 	close_pressed.emit()
