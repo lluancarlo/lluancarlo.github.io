@@ -2,15 +2,11 @@ extends Control
 class_name UiManager
 
 @export var _player : PlayerCar
-@export_group(&"Sub UI")
-@export var _debug_panel : Control
-@export var _hud_area_overlay : AreaOverlay
 @export_group(&"Sounds")
 @export var _audio_open : AudioStreamPlayer
 @export var _audio_close : AudioStreamPlayer
 @export_group(&"Dialogs")
 @export var _popups_control : Control
-@export var _warning_dialog : BasePopup
 @export var _where_born_dialog : BasePopup
 @export var _where_living_dialog : BasePopup
 @export var _university_dialog : BasePopup
@@ -18,13 +14,16 @@ class_name UiManager
 @export var _exp_magit_dialog : BasePopup
 @export var _exp_topgaming_dialog : BasePopup
 @export var _exp_deltaengine_dialog : BasePopup
-
+@export_category(&"Node Paths")
+@export var _hud : HUD
+@export var menu_main : PanelContainer
+@export var menu_options : PanelContainer
+var game_paused : bool
 var opened_popup : Control
 
 func _ready():
 	PlayerInput.interactive_pressed.connect(_on_interactive_pressed)
 	set_all_popups_invisible()
-	_warning_dialog.visible = true
 
 
 func set_all_popups_invisible() -> void:
@@ -61,11 +60,33 @@ func _on_interactive_pressed() -> void:
 		_player.can_drive = false
 
 
-func _on_closed() -> void:
+func _on_popup_closed() -> void:
 	_audio_close.play()
 	opened_popup = null
 	_player.can_drive = true
 
 
 func show_area_overlay(area_name: String) -> void:
-	_hud_area_overlay.show_new_area(area_name)
+	_hud.show_overlay_area(area_name)
+
+
+func update_gear(gear: int) -> void:
+	_hud.update_gear(gear)
+
+
+func update_speed(speed: int) -> void:
+	_hud.update_speed(speed)
+
+
+func _on_options_close_pressed() -> void:
+	menu_main.show()
+	menu_options.hide()
+
+
+func _on_main_options_pressed() -> void:
+	menu_main.hide()
+	menu_options.show()
+
+
+func _on_main_reset_pressed() -> void:
+	_player.reset_position()
