@@ -30,10 +30,9 @@ func _ready() -> void:
 	hide()
 
 
-func _physics_process(_d: float) -> void:
-	if Input.is_action_just_pressed("menu"):
-		if visible:
-			_on_close_pressed()
+func _on_menu_pressed() -> void:
+	if visible:
+		_on_close_pressed()
 
 
 func on_graphics_selected(selected: bool, config: Config) -> void:

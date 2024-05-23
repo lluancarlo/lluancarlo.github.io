@@ -31,7 +31,7 @@ func show_overlay_area(area_name: String, duration: float = 2.0) -> void:
 
 
 func update_gear(gear: int) -> void:
-	_gear.text = str(gear)
+	_gear.text = str(gear if gear > 0 else 'R')
 
 
 func update_speed(speed: int) -> void:

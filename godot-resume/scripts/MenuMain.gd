@@ -14,13 +14,12 @@ func _ready() -> void:
 	hide()
 
 
-func _physics_process(_d: float) -> void:
-	if Input.is_action_just_pressed("menu"):
-		if visible:
-			_on_resume_pressed()
-		elif not options_menu.visible:
-			get_tree().paused = true
-			show()
+func _on_menu_pressed() -> void:
+	if visible:
+		_on_resume_pressed()
+	elif not options_menu.visible:
+		get_tree().paused = true
+		show()
 
 
 func _on_resume_pressed() -> void:

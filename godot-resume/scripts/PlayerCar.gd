@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 	# Back light
 	set_break_light(acceleration < 0)
 	
-	update_gear(gear)
+	update_gear(0 if current_rpm < 0 else gear)
 	update_speed(linear_velocity.length() * 10)
 	previous_velocity = linear_velocity.length()
 

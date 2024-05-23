@@ -12,4 +12,4 @@ text = "Graduation?"
 texture = ExtResource("2_e68jc")
 
 [node name="Text" parent="VBox/Content" index="1"]
-text = "Yes, I have a degree on Science Computer. I finish it on 2018 at University Estacio, in Ribeirão Preto."
+text = "Yes, I have a degree on Computer Science. I finished it on 2018 at University Estacio, in Ribeirão Preto."

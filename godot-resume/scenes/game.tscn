@@ -3482,7 +3482,7 @@ transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 
 mesh = ExtResource("51_adspf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.31326, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.166944, 0)
 shape = SubResource("ConvexPolygonShape3D_nhhaw")
 
 [node name="WheelFL" type="VehicleWheel3D" parent="Player"]
@@ -3557,6 +3557,7 @@ script = ExtResource("1_gptlb")
 min_distance = 2.0
 
 [node name="UiManager" type="Control" parent="." node_paths=PackedStringArray("_player", "_audio_open", "_audio_close", "_popups_control", "_where_born_dialog", "_where_living_dialog", "_university_dialog", "_exp_consinco_dialog", "_exp_magit_dialog", "_exp_topgaming_dialog", "_exp_deltaengine_dialog", "_hud", "menu_main", "menu_options")]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -3716,7 +3717,6 @@ text = "99"
 label_settings = SubResource("LabelSettings_s4mdk")
 
 [node name="Menus" type="Control" parent="UiManager"]
-process_mode = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -4009,6 +4009,8 @@ stream = ExtResource("93_ajrje")
 [connection signal="body_shape_exited" from="City/Experiences/Area3D" to="City/Experiences" method="_on_area_3d_body_shape_exited"]
 [connection signal="gear_changed" from="Player" to="UiManager" method="update_gear"]
 [connection signal="speed_changed" from="Player" to="UiManager" method="update_speed"]
+[connection signal="menu_pressed" from="UiManager" to="UiManager/Menus/Main" method="_on_menu_pressed"]
+[connection signal="menu_pressed" from="UiManager" to="UiManager/Menus/Options" method="_on_menu_pressed"]
 [connection signal="closed" from="UiManager/Popups/WhereBorn" to="UiManager" method="_on_popup_closed"]
 [connection signal="closed" from="UiManager/Popups/WhereLiving" to="UiManager" method="_on_popup_closed"]
 [connection signal="closed" from="UiManager/Popups/University" to="UiManager" method="_on_popup_closed"]

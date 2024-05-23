@@ -1,6 +1,7 @@
 extends Control
 class_name UiManager
 
+signal menu_pressed()
 @export var _player : PlayerCar
 @export_group(&"Sounds")
 @export var _audio_open : AudioStreamPlayer
@@ -24,6 +25,14 @@ var opened_popup : Control
 func _ready():
 	PlayerInput.interactive_pressed.connect(_on_interactive_pressed)
 	set_all_popups_invisible()
+
+
+func _physics_process(_d: float) -> void:
+	if Input.is_action_just_pressed("menu"):
+		if opened_popup != null:
+			close_popup()
+		game_paused = !game_paused
+		menu_pressed.emit()
 
 
 func set_all_popups_invisible() -> void:
@@ -51,10 +60,14 @@ func open_popup(id: int) -> void:
 	_audio_open.play()
 
 
+func close_popup() -> void:
+	opened_popup.close()
+	opened_popup = null
+
+
 func _on_interactive_pressed() -> void:
 	if opened_popup != null:
-		opened_popup.close()
-		opened_popup = null
+		close_popup()
 	elif GameData.on_popup_id != 0:
 		open_popup(GameData.on_popup_id)
 		_player.can_drive = false
