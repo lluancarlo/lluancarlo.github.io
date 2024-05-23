@@ -3472,6 +3472,7 @@ transform = Transform3D(0.604112, 0, -0.796899, 0, 1, 0, 0.796899, 0, 0.604112, 
 
 [node name="Player" type="VehicleBody3D" parent="."]
 transform = Transform3D(-4.37113e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37113e-08, 0, 0.5, -8)
+mass = 50.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0.15, 0)
 can_sleep = false
@@ -3482,56 +3483,56 @@ transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 
 mesh = ExtResource("51_adspf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.166944, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0.197907, 0)
 shape = SubResource("ConvexPolygonShape3D_nhhaw")
 
 [node name="WheelFL" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(0.999999, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 0.999999, 0.5, 0.25, 0.53)
+transform = Transform3D(0.999998, 0, -4.9738e-14, 0, 1, 0, 4.9738e-14, 0, 0.999998, 0.45, 0.260228, 0.529999)
+use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.5
 wheel_radius = 0.3
-suspension_stiffness = 20.0
-suspension_max_force = 160.0
-damping_compression = 1.5
+wheel_rest_length = 0.08
+suspension_travel = 0.385
+suspension_stiffness = 50.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFL"]
 transform = Transform3D(0.8, 0, -3.55271e-15, 0, 0.8, 0, 3.55271e-15, 0, 0.8, -0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="WheelFR" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(0.999999, 0, -1.77636e-14, 0, 1, 0, 1.77636e-14, 0, 0.999999, -0.5, 0.25, 0.53)
+transform = Transform3D(0.999998, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 0.999998, -0.45, 0.260228, 0.529999)
+use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.5
 wheel_radius = 0.3
-suspension_stiffness = 20.0
-suspension_max_force = 160.0
-damping_compression = 1.5
+wheel_rest_length = 0.08
+suspension_travel = 0.385
+suspension_stiffness = 50.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelFR"]
 transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="WheelRL" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0.5, 0.25, -0.53)
-use_as_traction = true
+transform = Transform3D(0.999999, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 0.999999, 0.45, 0.260228, -0.529999)
 wheel_roll_influence = 0.5
 wheel_radius = 0.3
-suspension_stiffness = 20.0
-suspension_max_force = 160.0
-damping_compression = 1.5
+wheel_rest_length = 0.08
+suspension_travel = 0.385
+suspension_stiffness = 50.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRL"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.15, 0, 0)
 mesh = ExtResource("52_uodu7")
 
 [node name="WheelRR" type="VehicleWheel3D" parent="Player"]
-transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -0.5, 0.25, -0.53)
-use_as_traction = true
+transform = Transform3D(0.999999, 0, -3.19744e-14, 0, 1, 0, 3.19744e-14, 0, 0.999999, -0.45, 0.260228, -0.529999)
 wheel_roll_influence = 0.5
 wheel_radius = 0.3
-suspension_stiffness = 20.0
-suspension_max_force = 160.0
-damping_compression = 1.5
+wheel_rest_length = 0.08
+suspension_travel = 0.385
+suspension_stiffness = 50.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/WheelRR"]
 transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0.15, 0, 0)

@@ -31,7 +31,8 @@ func _physics_process(delta: float) -> void:
 		acceleration = 0
 	
 	if can_drive:
-		steering = lerp(steering, PlayerInput.axisX * 0.6, 6 * delta)
+		var max_steering = 0.8 - (linear_velocity.length() / 30.0)
+		steering = lerp(steering, PlayerInput.axisX * max_steering, 6 * delta)
 		engine_force = acceleration * max_torque * ( 1 - current_rpm / max_rpm)
 	else:
 		linear_velocity = Vector3.ZERO
