@@ -1,6 +1,6 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b0h037oplcutf"]
 
-[ext_resource type="FontFile" uid="uid://gqqdohjg3y7j" path="res://assets/Montreal-Regular.ttf" id="1_1g0xv"]
+[ext_resource type="FontFile" uid="uid://gqqdohjg3y7j" path="res://assets/fonts/Montreal-Regular.ttf" id="1_1g0xv"]
 
 [resource]
 font = ExtResource("1_1g0xv")

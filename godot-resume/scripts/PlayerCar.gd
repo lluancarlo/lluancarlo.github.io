@@ -16,14 +16,10 @@ var can_drive := true
 var previous_velocity : float
 var previous_gear : int
 var previous_speed : int
-var break_material : StandardMaterial3D
-var initial_break_color : Color
 
 
 func _ready() -> void:
 	initial_position = position
-	break_material = _mesh_instance.mesh.surface_get_material(6)
-	initial_break_color = break_material.albedo_color
 
 
 func _physics_process(delta: float) -> void:
@@ -75,9 +71,7 @@ func get_rpm() -> float:
 
 
 func set_break_light(on: bool) -> void:
-	var next_color = Color(1, 0.43, 0.32) if on else initial_break_color
-	if break_material.albedo_color != next_color:
-		break_material.albedo_color = next_color
+	pass #TODO
 
 
 func reset_position() -> void:

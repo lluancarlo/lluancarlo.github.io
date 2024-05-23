@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/PickUp.gd" id="1_ul7e6"]
 [ext_resource type="QuadMesh" uid="uid://b028udy8kuuja" path="res://assets/meshes/pick_up.tres" id="2_6msgh"]
-[ext_resource type="FontFile" uid="uid://gqqdohjg3y7j" path="res://assets/Montreal-Regular.ttf" id="3_gruea"]
-[ext_resource type="FontFile" uid="uid://b53g3g4l0rhtn" path="res://assets/Montreal-Bold.ttf" id="4_1os0l"]
+[ext_resource type="FontFile" uid="uid://gqqdohjg3y7j" path="res://assets/fonts/Montreal-Regular.ttf" id="3_gruea"]
+[ext_resource type="FontFile" uid="uid://b53g3g4l0rhtn" path="res://assets/fonts/Montreal-Bold.ttf" id="4_1os0l"]
 [ext_resource type="AudioStream" uid="uid://bbjsqboqu7moh" path="res://assets/kenney/interface-sounds/switch_003.ogg" id="4_ybkj6"]
 
 [sub_resource type="Animation" id="Animation_0i5as"]
