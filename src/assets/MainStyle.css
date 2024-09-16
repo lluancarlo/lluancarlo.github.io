@@ -1,0 +1,11 @@
+html {
+  background-image: url('symbol.png'), linear-gradient(0deg, #81887d, #26413e);
+  background-size: 50px;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+}
