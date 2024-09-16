@@ -2,6 +2,7 @@
 import './assets/TabsStyle.css'
 import ProfileImage from './components/ProfileImage.vue'
 import SocialCard from './components/SocialCard.vue'
+// @ts-ignore
 import { Tabs, Tab } from 'vue3-tabs-component'
 </script>
 
