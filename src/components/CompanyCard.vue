@@ -27,7 +27,7 @@ function dateIsToday(date: Date): Boolean {
       <p>{{ props.company?.position }}</p>
     </div>
     <div class="company-position">
-      <h4>in</h4>
+      <h4>from</h4>
       <p>
         {{ formattedDate(props.company?.startDate) }} to
         {{
