@@ -4,7 +4,7 @@ const props = defineProps({
   label: String,
   type: { type: String, default: 'png' }
 })
-const imgSrc = new URL(`../assets/${props.name}.${props.type}`, import.meta.url).href
+const imgSrc = new URL(`../assets/images/${props.name}.${props.type}`, import.meta.url).href
 </script>
 
 <template>

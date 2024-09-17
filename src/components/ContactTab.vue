@@ -1,0 +1,20 @@
+<script setup lang="ts">
+import SocialCard from '@/components/SocialCard.vue'
+</script>
+
+<template>
+  <h2>Contact</h2>
+  <div class="social-cards">
+    <SocialCard url="https://linkedin.com/in/luancarlosouza/" name="linkedin"></SocialCard>
+    <SocialCard url="https://github.com/lluancarlo" name="github"></SocialCard>
+    <SocialCard url="https://lluancarlo.itch.io/" name="itch"></SocialCard>
+  </div>
+</template>
+
+<style scoped>
+.social-cards {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+</style>

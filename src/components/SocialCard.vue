@@ -4,13 +4,13 @@ const props = defineProps({
   name: String,
   type: { type: String, default: 'svg' }
 })
-const imgSrc = new URL(`../assets/${props.name}.${props.type}`, import.meta.url).href
+const imgSrc = new URL(`../assets/images/${props.name}.${props.type}`, import.meta.url).href
 </script>
 
 <template>
   <div class="center">
     <div class="social-card">
-      <a :href="url" target="_blank">
+      <a :href="props.url" target="_blank">
         <img :src="imgSrc" width="50" />
       </a>
     </div>

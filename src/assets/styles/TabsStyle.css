@@ -1,8 +1,7 @@
 .tab-main {
   display: flex;
   flex-direction: column;
-  margin: 30px 5%;
-  overflow: hidden;
+  padding: 30px 5%;
 }
 .tabs {
   display: inline-flex;
@@ -28,8 +27,7 @@
 }
 .tab-active {
   background-color: #c66c5d;
-  animation-name: tabAnim;
-  animation-duration: 0.5s;
+  animation: tabAnim 0.5s ease-in-out;
 }
 .tab-inactive {
 }
@@ -42,19 +40,22 @@
 .tab-link-inactive {
 }
 .tab-content {
-  padding: 6px 12px;
-  border-radius: 15px;
+  padding: 25px;
   border: 2px solid #c66c5d;
+  border-radius: 15px;
   background-color: #81887d90;
 }
 @keyframes tabAnim {
   0% {
+    transform: translateY(0px);
     border-radius: 30px 30px 0 0;
   }
   50% {
+    transform: translateY(-10px);
     border-radius: 10px;
   }
   100% {
+    transform: translateY(0px);
     border-radius: 30px 30px 0 0;
   }
 }

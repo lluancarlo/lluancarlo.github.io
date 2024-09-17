@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import './assets/TabsStyle.css'
+import './assets/styles/TabsStyle.css'
 import ProfileImage from './components/ProfileImage.vue'
-import SocialCard from './components/SocialCard.vue'
-// @ts-ignore
+import AboutTab from './components/AboutTab.vue'
+import ProjectTab from './components/ProjectsTab.vue'
+import ContactTab from './components/ContactTab.vue'
 import { Tabs, Tab } from 'vue3-tabs-component'
 </script>
 
@@ -19,22 +20,16 @@ import { Tabs, Tab } from 'vue3-tabs-component'
     navItemLinkInactiveClass="tab-link-inactive"
     panelsWrapperClass="tab-content"
   >
-    <tab name="About"> UNDER CONSTRUCTION! </tab>
-    <tab name="Projects"> UNDER CONSTRUCTION! </tab>
+    <tab name="About">
+      <AboutTab></AboutTab>
+    </tab>
+    <tab name="Projects">
+      <ProjectTab></ProjectTab>
+    </tab>
     <tab name="Contact">
-      <div class="social-cards">
-        <SocialCard url="https://linkedin.com/in/luancarlosouza/" name="linkedin"></SocialCard>
-        <SocialCard url="https://github.com/lluancarlo" name="github"></SocialCard>
-        <SocialCard url="https://lluancarlo.itch.io/" name="itch"></SocialCard>
-      </div>
+      <ContactTab></ContactTab>
     </tab>
   </tabs>
 </template>
 
-<style scoped>
-.social-cards {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-</style>
+<style scoped></style>

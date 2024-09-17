@@ -1,0 +1,22 @@
+html {
+  background-image: url('@/assets/images/symbol.png'), linear-gradient(0deg, #81887d, #26413e);
+  background-size: 50px;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+}
+
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0 0;
+}
