@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const props = defineProps({
   url: String,
-  name: String
+  name: String,
+  type: { type: String, default: 'svg' }
 })
-// const imgSrc = `/src/assets/${props.name}.svg`
-const imgSrc = new URL(`../assets/${props.name}.svg`, import.meta.url).href
+const imgSrc = new URL(`../assets/${props.name}.${props.type}`, import.meta.url).href
 </script>
 
 <template>
