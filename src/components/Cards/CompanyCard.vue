@@ -52,7 +52,7 @@ function dateIsToday(date: Date): Boolean {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .item:hover {
   background-color: #f4d99c90;

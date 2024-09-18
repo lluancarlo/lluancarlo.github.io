@@ -21,11 +21,11 @@ const imgSrc = new URL(`../../assets/images/${props.name}.${props.type}`, import
 .social-card {
   border-radius: 25%;
   margin: 10px;
+  transition: all 0.5s ease-in-out;
 }
 
 .social-card:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-  transition: 0.8s;
+  background-color: #ffffff4d;
+  transform: scale(1.2);
 }
 </style>
