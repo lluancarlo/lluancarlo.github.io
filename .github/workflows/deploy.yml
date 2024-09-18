@@ -1,21 +1,22 @@
 name: "Deploy to github.io"
 on:
   push:
-    branches: ['master']
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+    branches:
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,11 +32,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Dir
-        run: cd dist && ls -ll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-            github_token: ${{ secrets.CL_TOKEN }}
-            publish_dir: dist
+        id: deployment
+        uses: actions/deploy-pages@v4
