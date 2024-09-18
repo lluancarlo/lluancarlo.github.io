@@ -11,4 +11,4 @@ npm run dev
 
 ## Info
 
-[![Deploy](https://github.com/lluancarlo/lluancarlo.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/lluancarlo/lluancarlo.github.io/actions/workflows/static.yml)
+[![Deploy](https://github.com/lluancarlo/lluancarlo.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/lluancarlo/lluancarlo.github.io/actions/workflows/deploy.yml)
