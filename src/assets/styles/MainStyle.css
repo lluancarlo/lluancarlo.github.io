@@ -1,3 +1,5 @@
+@import 'StyleLib.css';
+
 html {
   background-image: url('@/assets/images/symbol.png'), linear-gradient(0deg, #81887d, #26413e);
   background-size: 50px;

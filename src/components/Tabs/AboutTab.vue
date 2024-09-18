@@ -59,8 +59,8 @@ experiencesList.reverse()
 
 <template>
   <div class="page-box">
-    <div class="page-box-item about-me">
-      <h2>About me</h2>
+    <div class="page-box-item">
+      <h2 class="page-title">About me</h2>
       <p>
         I’m Brazilian with European citizenship (thanks grandma!), living in Italy. I have
         professional experience as a full-stack developer, with front-end, back-end and database
@@ -68,8 +68,8 @@ experiencesList.reverse()
         for it!
       </p>
     </div>
-    <div class="page-box-item about-experiences">
-      <h2>Experiences</h2>
+    <div class="page-box-item">
+      <h2 class="page-title">Experiences</h2>
       <div class="about-experiences-box">
         <CompanyCard v-for="(exp, i) in experiencesList" :key="i" :company="exp"></CompanyCard>
       </div>
@@ -78,16 +78,6 @@ experiencesList.reverse()
 </template>
 
 <style scoped>
-.about-me h2 {
-  text-align: center;
-}
-.about-experiences {
-  margin-bottom: 0 !important;
-}
-
-.about-experiences h2 {
-  text-align: center;
-}
 .about-experiences-box {
   margin-top: 10px;
   display: flex;

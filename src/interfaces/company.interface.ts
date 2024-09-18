@@ -1,10 +1,10 @@
 export interface Company {
-  link: String
-  logo: String
-  name: String
-  position: String
+  link: string
+  logo: string
+  name: string
+  position: string
   startDate: Date
   endDate: Date
-  location: String
-  description: String
+  location: string
+  description: string
 }

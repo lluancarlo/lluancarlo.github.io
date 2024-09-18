@@ -3,7 +3,7 @@ import type { Company } from '@/interfaces/company.interface'
 const props = defineProps({
   company: { type: Object as () => Company, required: true }
 })
-function formattedDate(date: Date): String {
+function formattedDate(date: Date): string {
   return date.toLocaleString('en-us', { month: 'short', year: 'numeric' })
 }
 function dateIsToday(date: Date): Boolean {
