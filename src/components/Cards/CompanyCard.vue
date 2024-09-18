@@ -75,16 +75,13 @@ function dateIsToday(date: Date): Boolean {
   display: flex;
   align-items: center;
   gap: 1em;
+  color: #000;
+  text-decoration: none !important;
 }
 .company-title img {
   height: 50px;
   width: 50px;
   align-self: center;
   border-radius: 50%;
-}
-
-.company-title h3 {
-  color: #000;
-  text-decoration: none !important;
 }
 </style>
