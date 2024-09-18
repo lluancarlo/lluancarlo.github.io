@@ -4,7 +4,8 @@ const props = defineProps({
   name: String,
   type: { type: String, default: 'svg' }
 })
-const imgSrc = new URL(`../assets/images/${props.name}.${props.type}`, import.meta.url).href
+const imgSrc = new URL(`../../assets/images/${props.name}.${props.type}`, import.meta.url).href
+console.log(imgSrc)
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CompanyCard from '@/components/CompanyCard.vue'
+import CompanyCard from '@/components/Cards/CompanyCard.vue'
 import type { Company } from '@/interfaces/company.interface'
 
 const experiencesList: Company[] = [
@@ -58,17 +58,17 @@ experiencesList.reverse()
 </script>
 
 <template>
-  <div class="about-box">
-    <div class="about-me">
+  <div class="page-box">
+    <div class="page-box-item about-me">
       <h2>About me</h2>
       <p>
         I’m Brazilian with European citizenship (thanks grandma!), living in Italy. I have
-        professional experience as a full-stack developer, with front-end, back-end and database.
+        professional experience as a full-stack developer, with front-end, back-end and database
         Furthermore, I have been working as a game developer and personally I have a strong passion
         for it!
       </p>
     </div>
-    <div class="about-experiences">
+    <div class="page-box-item about-experiences">
       <h2>Experiences</h2>
       <div class="about-experiences-box">
         <CompanyCard v-for="(exp, i) in experiencesList" :key="i" :company="exp"></CompanyCard>
@@ -78,14 +78,6 @@ experiencesList.reverse()
 </template>
 
 <style scoped>
-.about-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about-box div {
-  margin-bottom: 20px;
-}
 .about-me h2 {
   text-align: center;
 }

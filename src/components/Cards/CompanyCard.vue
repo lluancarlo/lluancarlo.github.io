@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Company } from '@/interfaces/company.interface'
 const props = defineProps({
-  company: Object as () => Company
+  company: { type: Object as () => Company, required: true }
 })
 function formattedDate(date: Date): String {
   return date.toLocaleString('en-us', { month: 'short', year: 'numeric' })
@@ -14,29 +14,29 @@ function dateIsToday(date: Date): Boolean {
 
 <template>
   <div class="item">
-    <a :href="props.company?.link" target="_blank" class="company-title">
-      <img :src="props.company?.logo" :alt="props.company?.name" />
-      <h3>{{ props.company?.name }}</h3>
+    <a :href="props.company.link" target="_blank" class="company-title">
+      <img :src="props.company.logo" :alt="props.company.name" />
+      <h3>{{ props.company.name }}</h3>
     </a>
     <div class="company-position">
       <h4>at</h4>
-      <p>{{ props.company?.location }}</p>
+      <p>{{ props.company.location }}</p>
     </div>
     <div class="company-position">
       <h4>as</h4>
-      <p>{{ props.company?.position }}</p>
+      <p>{{ props.company.position }}</p>
     </div>
     <div class="company-position">
       <h4>from</h4>
       <p>
-        {{ formattedDate(props.company?.startDate) }} to
+        {{ formattedDate(props.company.startDate) }} to
         {{
-          dateIsToday(props.company?.endDate) ? 'Present' : formattedDate(props.company?.startDate)
+          dateIsToday(props.company.endDate) ? 'Present' : formattedDate(props.company.startDate)
         }}
       </p>
     </div>
     <div class="company-position">
-      <p>{{ props.company?.description }}</p>
+      <p>{{ props.company.description }}</p>
     </div>
   </div>
 </template>

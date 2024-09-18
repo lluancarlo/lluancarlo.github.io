@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SocialCard from '@/components/SocialCard.vue'
+import SocialCard from '@/components/Cards/SocialCard.vue'
 </script>
 
 <template>

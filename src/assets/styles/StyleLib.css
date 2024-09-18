@@ -1,0 +1,26 @@
+/* .page-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rebeccapurple;
+}
+.page-box-item {
+  margin-bottom: 20px;
+} */
+
+.test {
+  background-color: #ffa540;
+  border: dotted 2px #000;
+}
+.testr {
+  background-color: #ff9090;
+  border: dotted 2px #ff0000;
+}
+.testg {
+  background-color: #008000;
+  border: dotted 2px #fff;
+}
+.testb {
+  background-color: #0000ff;
+  border: dotted 2px #dd6108;
+}

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import './assets/styles/TabsStyle.css'
-import ProfileImage from './components/ProfileImage.vue'
-import AboutTab from './components/AboutTab.vue'
-import ProjectTab from './components/ProjectsTab.vue'
-import ContactTab from './components/ContactTab.vue'
+// @ts-ignore: To fix error "Could not find a declaration file for module 'MODULE'. 'URL' Implicitly has an 'any' type".
 import { Tabs, Tab } from 'vue3-tabs-component'
+import ProfileImage from '@/components/Cards/ProfileImageCard.vue'
+import AboutTab from '@/components/Tabs/AboutTab.vue'
+import ProjectTab from '@/components/Tabs/ProjectsTab.vue'
+import ContactTab from '@/components/Tabs/ContactTab.vue'
+import '@/assets/styles/TabsStyle.css'
 </script>
 
 <template>
