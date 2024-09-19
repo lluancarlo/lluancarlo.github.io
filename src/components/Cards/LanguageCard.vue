@@ -1,23 +1,21 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import ProficiencyEnum from "@/enums/proficiency.enum"
+import type { Language } from '@/interfaces/language.interface';
 const props = defineProps({
-  name: { type: String, required: true },
-  imgSrc: { type: String, required: true },
-  proficiency: { type: Number as PropType<ProficiencyEnum>, required: true },
+  language: { type: Object as () => Language, required: true },
 })
-const imgSrc = new URL(`../../assets/images/${props.imgSrc}`, import.meta.url).href
+const imgSrc = new URL(`../../assets/images/${props.language.image}`, import.meta.url).href
 </script>
 
 <template>
   <div class="card language-card">
   	  <div class="card-line">
       <img class="language-flag" :src="imgSrc"/>
-        <h3>{{ props.name }}</h3>
+        <h3>{{ props.language.name }}</h3>
     </div>
     <div class="card-line">
       <p>on level</p>
-      <h4>{{ ProficiencyEnum[props.proficiency] }}</h4>
+      <h4>{{ ProficiencyEnum[props.language.proficiency] }}</h4>
     </div>
   </div>
 </template>

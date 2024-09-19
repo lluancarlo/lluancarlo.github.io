@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import CompanyCard from '@/components/Cards/CompanyCard.vue'
 import LanguageCard from '../Cards/LanguageCard.vue';
-import type { Company } from '@/interfaces/company.interface'
 import LanguageProficiency from '@/enums/proficiency.enum';
+import type { Company } from '@/interfaces/company.interface'
+import type { Language } from '@/interfaces/language.interface';
 
 const experiencesList: Company[] = [
   {
@@ -57,6 +58,24 @@ const experiencesList: Company[] = [
   }
 ]
 experiencesList.reverse()
+const languageList: Language[] = [
+{
+  name: "Portoguese",
+  image: "flag-br.svg",
+  proficiency: LanguageProficiency.Native
+},
+{
+  name: "Italian",
+  image: "flag-it.svg",
+  proficiency: LanguageProficiency.B1
+},
+{
+  name: "English",
+  image: "flag-us.svg",
+  proficiency: LanguageProficiency.C1
+}
+]
+languageList.reverse()
 </script>
 
 <template>
@@ -72,27 +91,13 @@ experiencesList.reverse()
     </div>
     <div class="page-box-item">
       <h2 class="page-title">Languages</h2>
-      <div class="about-experiences-box">
-        <LanguageCard 
-          name="English" 
-          :proficiency="LanguageProficiency.C1" 
-          imgSrc="flag-us.svg">
-        </LanguageCard>
-        <LanguageCard 
-          name="Italian" 
-          :proficiency="LanguageProficiency.B1" 
-          imgSrc="flag-it.svg">
-        </LanguageCard>
-        <LanguageCard 
-          name="Portoguese" 
-          :proficiency="LanguageProficiency.Native" 
-          imgSrc="flag-br.svg">
-        </LanguageCard>
+      <div class="about-box">
+        <LanguageCard v-for="(lang, i) in languageList" :key="i" :language="lang"></LanguageCard>
       </div>
     </div>
     <div class="page-box-item">
       <h2 class="page-title">Experiences</h2>
-      <div class="about-experiences-box">
+      <div class="about-box">
         <CompanyCard v-for="(exp, i) in experiencesList" :key="i" :company="exp"></CompanyCard>
       </div>
     </div>
@@ -100,11 +105,11 @@ experiencesList.reverse()
 </template>
 
 <style scoped>
-.about-experiences-box {
+.about-box{
   margin-top: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1em;
 }
