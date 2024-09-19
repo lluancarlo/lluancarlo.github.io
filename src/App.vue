@@ -5,6 +5,7 @@ import ProfileImage from '@/components/Cards/ProfileImageCard.vue'
 import AboutTab from '@/components/Tabs/AboutTab.vue'
 import ProjectTab from '@/components/Tabs/ProjectsTab.vue'
 import ContactTab from '@/components/Tabs/ContactTab.vue'
+import InteractiveTab from './components/Tabs/InteractiveTab.vue'
 import '@/assets/styles/TabsStyle.css'
 </script>
 
@@ -26,6 +27,9 @@ import '@/assets/styles/TabsStyle.css'
     </tab>
     <tab name="Projects">
       <ProjectTab></ProjectTab>
+    </tab>
+    <tab name="Interactive">
+      <InteractiveTab></InteractiveTab>
     </tab>
     <tab name="Contact">
       <ContactTab></ContactTab>

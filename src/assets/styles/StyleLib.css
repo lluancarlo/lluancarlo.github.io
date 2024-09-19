@@ -5,6 +5,8 @@
 }
 .page-box-item {
   margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 .page-title {
   text-align: center;
@@ -38,6 +40,19 @@
 .card-line p {
   color: #000;
   margin: 0;
+}
+
+.button {
+  background-color: #c66c5d;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 1s;
+  cursor: pointer;
+  font-size: 100%;
+}
+.button:hover {
+  background-color: #f4d99c;
 }
 
 .test {
