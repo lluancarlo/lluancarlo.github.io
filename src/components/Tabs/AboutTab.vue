@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import CompanyCard from '@/components/Cards/CompanyCard.vue'
+import LanguageCard from '../Cards/LanguageCard.vue';
 import type { Company } from '@/interfaces/company.interface'
+import LanguageProficiency from '@/enums/proficiency.enum';
 
 const experiencesList: Company[] = [
   {
@@ -67,6 +69,26 @@ experiencesList.reverse()
         Furthermore, I have been working as a game developer and personally I have a strong passion
         for it!
       </p>
+    </div>
+    <div class="page-box-item">
+      <h2 class="page-title">Languages</h2>
+      <div class="about-experiences-box">
+        <LanguageCard 
+          name="English" 
+          :proficiency="LanguageProficiency.C1" 
+          imgSrc="flag-us.svg">
+        </LanguageCard>
+        <LanguageCard 
+          name="Italian" 
+          :proficiency="LanguageProficiency.B1" 
+          imgSrc="flag-it.svg">
+        </LanguageCard>
+        <LanguageCard 
+          name="Portoguese" 
+          :proficiency="LanguageProficiency.Native" 
+          imgSrc="flag-br.svg">
+        </LanguageCard>
+      </div>
     </div>
     <div class="page-box-item">
       <h2 class="page-title">Experiences</h2>

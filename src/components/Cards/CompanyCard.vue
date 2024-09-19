@@ -34,11 +34,13 @@ function calculatePeriodBetweenDates(startDate: Date, endDate: Date): String {
 </script>
 
 <template>
-  <div class="item">
-    <a :href="props.company.link" target="_blank" class="company-title">
-      <img :src="props.company.logo" :alt="props.company.name" />
-      <h3>{{ props.company.name }}</h3>
-    </a>
+  <div class="card">
+    <div class="card-line">
+      <a :href="props.company.link" target="_blank" class="company-title">
+        <img :src="props.company.logo" :alt="props.company.name" />
+        <h3>{{ props.company.name }}</h3>
+      </a>
+  </div>
     <div class="card-line">
       <h4>at</h4>
       <p>{{ props.company.location }}</p>
@@ -68,35 +70,6 @@ function calculatePeriodBetweenDates(startDate: Date, endDate: Date): String {
 </template>
 
 <style scoped>
-.item {
-  margin: 0 !important;
-  padding: 10px;
-  width: 300px;
-  background-color: #81887d;
-  border: 2px solid #c66c5d;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
-}
-.item:hover {
-  background-color: #f4d99c90;
-  transform: scale(1.05);
-}
-.card-line {
-  display: inline-flex;
-  gap: 0.5em;
-  align-items: center;
-}
-.card-line h4 {
-  color: #000;
-  margin: 0;
-}
-.card-line p {
-  color: #000;
-  margin: 0;
-}
 .company-title {
   display: flex;
   align-items: center;
