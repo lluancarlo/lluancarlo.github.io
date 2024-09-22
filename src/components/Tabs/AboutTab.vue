@@ -60,7 +60,7 @@ const experiencesList: Company[] = [
 experiencesList.reverse()
 const languageList: Language[] = [
 {
-  name: "Portoguese",
+  name: "Portuguese",
   image: "flag-br.svg",
   proficiency: LanguageProficiency.Native
 },
