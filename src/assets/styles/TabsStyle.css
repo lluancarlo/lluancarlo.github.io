@@ -1,7 +1,7 @@
 .tab-main {
   display: flex;
   flex-direction: column;
-  padding: 30px 5%;
+  padding: 30px 10%;
 }
 .tabs {
   display: inline-flex;

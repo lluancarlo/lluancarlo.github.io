@@ -8,7 +8,7 @@ import type { Language } from '@/interfaces/language.interface';
 const experiencesList: Company[] = [
   {
     link: 'https://consinco.com.br/',
-    logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQENYJigrmeXeg/company-logo_100_100/company-logo_100_100/0/1631557956575/totvs_logo?e=1734566400&v=beta&t=6rNhAjZqZxdXSfXWf_KyKZ1u_aHuhYHDerinqCd-Jp4',
+    logo: 'totvs.jpg',
     name: 'Consinco SA By Totvs',
     position: 'Full-Stack Developer',
     startDate: new Date(2018, 3, 1),
@@ -18,7 +18,7 @@ const experiencesList: Company[] = [
   },
   {
     link: 'https://www.mag-it.com.br/en',
-    logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQF2u_uEAikODA/company-logo_100_100/company-logo_100_100/0/1649422783297/mag_it_partner_logo?e=1734566400&v=beta&t=WWhJ_OWezmClg2vwfsxbJhBs8xEt6VhmHDQUnuhW4d8',
+    logo: 'magit.jpg',
     name: 'Magit IT Partner',
     position: 'Full-Stack Developer',
     startDate: new Date(2020, 9, 1),
@@ -28,7 +28,7 @@ const experiencesList: Company[] = [
   },
   {
     link: 'https://topgaming.dev/',
-    logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQH-Daee3urzMQ/company-logo_100_100/company-logo_100_100/0/1693858592934?e=1734566400&v=beta&t=rpUAACbWFxM-2yk678dXEwEGsNKEJ3w51ePMswTo9hA',
+    logo: 'topgaming.jpg',
     name: 'Top Gaming Newtork Ltd',
     position: 'Game Developer',
     startDate: new Date(2022, 6, 1),
@@ -38,7 +38,7 @@ const experiencesList: Company[] = [
   },
   {
     link: 'https://deltaengine.net/',
-    logo: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.goodfirms.co%2Fsoftware%2Fgeneral%2Fdeltaengine.png&f=1&nofb=1&ipt=3ce7ca4c766f23773d675815b8f9a317d26d9679b8e0fe809d7a1e25e9bbcd19&ipo=images',
+    logo: 'deltaengine.png',
     name: 'Delta Engine GmbH',
     position: 'Game Developer',
     startDate: new Date(2023, 9, 1),
@@ -48,7 +48,7 @@ const experiencesList: Company[] = [
   },
   {
     link: 'https://amilon.com/',
-    logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQFSoPZ2R67ggg/company-logo_100_100/company-logo_100_100/0/1673534788201/amilon_srl_logo?e=1734566400&v=beta&t=YODgiFrn8YHU0VuUR3oDKbpgKvlEt4oO_24LSNWd1qc',
+    logo: 'amilon.jpg',
     name: 'Amilon',
     position: 'Full-Stack Developer',
     startDate: new Date(2024, 8, 1),
@@ -67,7 +67,7 @@ const languageList: Language[] = [
 {
   name: "Italian",
   image: "flag-it.svg",
-  proficiency: LanguageProficiency.B1
+  proficiency: LanguageProficiency.C1
 },
 {
   name: "English",
@@ -105,7 +105,8 @@ languageList.reverse()
 </template>
 
 <style scoped>
-.about-box{
+.about-box
+{
   margin-top: 10px;
   display: flex;
   flex-direction: row;

@@ -18,13 +18,15 @@ const imgSrc = new URL(`../../assets/images/${props.name}.${props.type}`, import
 </template>
 
 <style scoped>
-.social-card {
+.social-card
+{
   border-radius: 25%;
   margin: 10px;
   transition: all 0.5s ease-in-out;
 }
 
-.social-card:hover {
+.social-card:hover
+{
   background-color: #ffffff4d;
   transform: scale(1.2);
 }

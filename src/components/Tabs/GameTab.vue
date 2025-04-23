@@ -55,7 +55,8 @@ function onButtonClick(): void {
 </template>
 
 <style scoped>
-iframe {
+iframe
+{
   width: 100%;
   max-width: 1920px;
   height: auto;
@@ -63,11 +64,13 @@ iframe {
   border: 2px solid black;
   border-radius: 20px;
 }
-.game-instructions {
+.game-instructions
+{
   margin-left: auto;
   margin-right: auto;
 }
-th, td{
+th, td
+{
   border: 1px solid black;
   padding: 5px;
 }

@@ -3,18 +3,25 @@ import type { Company } from '@/interfaces/company.interface'
 const props = defineProps({
   company: { type: Object as () => Company, required: true }
 })
-function formattedDate(date: Date): string {
+
+function formattedDate(date: Date): string
+{
   return date.toLocaleString('en-us', { month: 'short', year: 'numeric' })
 }
-function IsDateToday(date: Date): Boolean {
+
+function IsDateToday(date: Date): Boolean
+{
   let today = new Date()
   return today.getDate() === date.getDate() && today.getMonth() === date.getMonth()
 }
-function calculatePeriodBetweenDates(startDate: Date, endDate: Date): String {
+
+function calculatePeriodBetweenDates(startDate: Date, endDate: Date): String
+{
   let yearsDifference = endDate.getFullYear() - startDate.getFullYear();
   let monthsDifference = endDate.getMonth() - startDate.getMonth();
 
-  if (monthsDifference < 0) {
+  if (monthsDifference < 0)
+  {
       yearsDifference--;
       monthsDifference += 12;
   }
@@ -22,7 +29,8 @@ function calculatePeriodBetweenDates(startDate: Date, endDate: Date): String {
   let result = ""
   if (yearsDifference > 0)
     result = `${yearsDifference} year${yearsDifference > 1 ? 's' : ''}`
-  if (monthsDifference > 0){
+  if (monthsDifference > 0)
+  {
     if (result.length > 0)
       result += ' and '
     result += `${monthsDifference} month${monthsDifference > 1 ? 's' : ''}`
@@ -31,13 +39,14 @@ function calculatePeriodBetweenDates(startDate: Date, endDate: Date): String {
   return result;
 }
 
+const imgSrc = new URL(`../../assets/images/${props.company.logo}`, import.meta.url).href
 </script>
 
 <template>
   <div class="card">
     <div class="card-line">
       <a :href="props.company.link" target="_blank" class="company-title">
-        <img :src="props.company.logo" :alt="props.company.name" />
+        <img :src="imgSrc" :alt="props.company.name" />
         <h3>{{ props.company.name }}</h3>
       </a>
   </div>

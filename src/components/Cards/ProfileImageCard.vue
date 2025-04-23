@@ -15,12 +15,14 @@ const imgSrc = new URL(`../../assets/images/${props.name}.${props.type}`, import
 </template>
 
 <style scoped>
-.profile-img {
+.profile-img
+{
   border-radius: 50%;
   border: 5px #c66c5d solid;
 }
 
-.profile-label {
+.profile-label
+{
   margin: 0;
   font-size: 50px;
   font-family: fantasy !important;
@@ -28,7 +30,8 @@ const imgSrc = new URL(`../../assets/images/${props.name}.${props.type}`, import
   text-orientation: sideways-right;
 }
 
-.profile {
+.profile
+{
   padding-top: 50px;
   text-align: center;
 }

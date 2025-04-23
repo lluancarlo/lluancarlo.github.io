@@ -1,4 +1,5 @@
-export interface Company {
+export interface Company
+{
   link: string
   logo: string
   name: string

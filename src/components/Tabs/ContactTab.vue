@@ -16,7 +16,8 @@ import SocialCard from '@/components/Cards/SocialCard.vue'
 </template>
 
 <style scoped>
-.social-cards {
+.social-cards
+{
   padding: 10px;
   display: flex;
   justify-content: center;

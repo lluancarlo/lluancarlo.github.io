@@ -21,13 +21,16 @@ const imgSrc = new URL(`../../assets/images/${props.language.image}`, import.met
 </template>
 
 <style scoped>
-.language-card {
+.language-card
+{
   width: 175px;
 }
-.language-proficiency {
+.language-proficiency
+{
   color:#c66c5d;
 }
-.language-flag {
+.language-flag
+{
   height: 50px;
   width: 50px;
   align-self: center;
